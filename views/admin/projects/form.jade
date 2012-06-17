@@ -1,0 +1,49 @@
+extends ../layout
+
+include ../../mixins/forms
+include ../../mixins/menus
+include ../../mixins/tables
+
+block content
+  
+  h1= title
+  
+  mixin helpmenu_back('projects')
+  
+  .form
+    form(action='', method='post', class='form-horizontal', enctype='multipart/form-data')
+      mixin method(method)
+      mixin csrf(token)
+      table.table.table-bordered.table-striped
+        mixin thead( [ 'Project' ] )
+        tbody
+          - if (method == 'put')
+            tr
+              td
+                mixin disabled('id', 'ID', session.form.values.id, session.form.errors.id, '')
+          tr
+            td
+              mixin input('text', 'name', 'Name', session.form.values.name, session.form.errors.name, '', true)
+          tr
+            td
+              mixin input('text', 'title', 'Title', session.form.values.title, session.form.errors.title, '', true)  
+          tr
+            td
+              mixin textarea('description', 'Description', session.form.values.description, session.form.errors.description, '')
+          tr
+            td
+              mixin input('text', 'categories', 'Categories', session.form.values.categories, session.form.errors.categories, '')
+          tr
+            td
+              mixin file('image', 'Image', session.form.values.image, session.form.errors.image, '')
+          tr
+            td
+              mixin input('text', 'video', 'Video', session.form.values.video, session.form.errors.video, '')
+          tr
+            td
+              mixin input('text', 'link', 'Link', session.form.values.link, session.form.errors.link, '')
+          tr
+            td
+              mixin file('photo', 'Photo', session.form.values.photo, session.form.errors.photo, '')
+      mixin actions(method)
+            

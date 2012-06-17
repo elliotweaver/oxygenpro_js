@@ -1,0 +1,59 @@
+extends layout
+
+block content
+  
+  #subheader
+    .container
+      .row
+        .span12
+          .inside
+            .title
+              h1
+                | Work
+            .submenu
+              ul
+                li
+                  a(href='#case-studies')
+                    | Case Studies
+                li
+                  a(href='#projects')
+                    | Projects
+
+  a(name='case-studies')
+  #case-studies
+    .container
+      .row
+        .span12
+          .inside
+            .title
+              h2
+                | Case Studies
+            .subtitle
+              | lorem ipsum
+            .cases
+              | test
+              
+  
+  a(name='projects')
+  #projects
+    .container
+      .row
+        .span12
+          .inside
+            .title
+              h2
+                | projects
+            .subtitle
+              | lorem ipsum
+            .projects
+              - var i = 0;
+              - for project in projects
+                - if (i == 4) { i = 0; } else { i += 1; }
+                div(class='project project-#{i}')
+                  .image
+                    img(src='/images/#{project.image}')
+                  .text
+                    .name
+                      | #{project.name}
+                    .description
+                      | #{project.description}

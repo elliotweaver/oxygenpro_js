@@ -1,0 +1,631 @@
+body {
+  padding: 0;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #ff0143;
+}
+h1 {}
+h2 {}
+h3 {
+    color: #1F2C35;
+    margin: 10px 0;
+}
+
+
+/* Temp 
+.container {}
+.inside {
+  background-color: #DDDDDD;
+  min-height: 30px;
+  margin: 20px;
+}
+.span1 .inside {
+  background-color: #CCCCCC;
+}
+.span4 .inside {
+  background-color: #BBBBBB;
+}
+.span6 .inside {
+  background-color: #AAAAAA;
+}
+.span8 .inside {
+  background-color: #999999;
+}
+.span12 .inside {
+  background-color: #888888;
+}
+*/
+
+/* Utilities */
+.throw {
+    position: absolute;
+    text-indent: -99999px;
+}
+.inside {
+    position: relative;
+}
+
+/* Text Colors */
+.t-pink {
+    color: #ff0143;
+}
+.t-white {
+    color: #FFFFFF;
+}
+.t-green {
+    color: #4caf4a;
+}
+.t-black {
+    color: #000000;
+}
+.t-black-dark {
+    color: #181818;
+}
+.t-grey-light {
+    color: #939393;
+}
+.t-grey {
+    color: #606366;
+}
+.t-grey-dark {
+    color: #1f2c35;
+}
+.t-grey-darker {
+    color: #c7cacd;
+}
+.t-grey-darkest {
+    color: #47494b;
+}
+
+/* Background Colors */
+.bg-white {
+    background-color: #FFFFFF;
+}
+.bg-black {
+    background-color: #000000;
+}
+.bg-pink {
+    background-color: #ff0143;
+}
+.bg-grey-white {
+    background-color: #e2e2e2;
+}
+.bg-grey {
+    background-color: #474e56;
+}
+.bg-grey-black {
+    background-color: #181a1c;
+}
+
+/* Background Images */
+.bg-dots {
+    background: url('/images/bg-dots.jpg') no-repeat scroll right bottom transparent;
+}
+.bg-gradient-grey {
+    background: url('/images/bg-gradient-grey.png') repeat-x scroll center top #474e56;
+}
+.bg-gradient-white {
+    background: url('/images/bg-gradient-white.jpg') no-repeat scroll center top #FFFFFF;
+}
+.bg-gradient-grey-light {
+    background: url('/images/bg-gradient-grey-light.png') repeat-x scroll center top transparent;
+}
+.bg-gradient-white-light {
+    background: url('/images/bg-gradient-white-light.png') no-repeat scroll center top transparent;
+}
+.bg-checkered {
+    background: url('/images/bg-checkered.png') repeat-x scroll center top transparent;
+}
+.bg-footer {
+    background: url('/images/bg-footer.png') repeat-x scroll center top #181a1c;
+}
+
+/* Padding */
+.pad-5 {
+    padding: 5px;
+}
+.pad-10 {
+    padding: 10px;
+}
+.pad-15 {
+    padding: 15px;
+}
+.pad-20 {
+    padding: 20px;
+}
+.pad-30 {
+    padding: 30px;
+}
+.pad-40 {
+    padding: 40px;
+}
+.pad-50 {
+    padding: 50px;
+}
+
+/* Margin */
+.mar-5 {
+    margin: 5px;
+}
+.mar-10 {
+    margin: 10px;
+}
+.mar-15 {
+    margin: 15px;
+}
+.mar-20 {
+    margin: 20px;
+}
+
+/* Common */
+.title {
+    display: inline-block;
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 22px;
+    padding: 5px 12px;
+    text-transform: uppercase;
+}
+.arrow-bright a {
+    background: url("../images/arrow.png") no-repeat scroll right center transparent;
+    display: block;
+    padding-bottom: 5px;
+    padding-right: 30px;
+    padding-top: 5px;
+    text-align: right;
+    font-weight: bold;
+}
+
+#clients .row {}
+#clients .row.last {
+    margin-top: 30px;
+}
+.client-logo {
+    background: url("../images/clients.png") repeat scroll 0 0 transparent;
+    display: inline-block;
+    height: 90px;
+    width: 117px;
+}
+.client-disney {
+    background-position: 0 0;
+}
+.client-disney:hover {
+    background-position: -670px 0;
+}
+.client-vmware {
+    background-position: -120px 0;
+    width: 190px;
+}
+.client-vmware:hover {
+    background-position: -790px 0;
+}
+.client-abc {
+    background-position: -310px 0;
+    width: 100px;
+}
+.client-abc:hover {
+    background-position: -980px 0;
+}
+.client-ca {
+    background-position: -410px 0;
+    width: 80px;
+}
+.client-ca:hover {
+    background-position: -1080px 0;
+}
+.client-naturipe {
+    background-position: -510px 0;
+    width: 130px;
+}
+.client-naturipe:hover {
+    background-position: -1180px 0;
+}
+
+
+.client-synopsys {
+    background-position: 0 -85px;
+    width: 130px;
+}
+.client-synopsys:hover {
+    background-position: -670px -85px;
+}
+.client-ebay {
+    background-position: -140px -85px;
+}
+.client-ebay:hover {
+    background-position: -810px -85px;
+}
+.client-upspring {
+    background-position: -260px -85px;
+    width: 160px;
+}
+.client-upspring:hover {
+    background-position: -930px -85px;
+}
+.client-thx {
+    background-position: -430px -85px;
+    width: 110px;
+}
+.client-thx:hover {
+    background-position: -1100px -85px;
+}
+.client-univa {
+    background-position: -540px -85px;
+    width: 100px;
+}
+.client-univa:hover {
+    background-position: -1210px -85px;
+}
+
+
+.client-milton {
+    background-position: 0 -180px;
+    width: 110px;
+}
+.client-milton:hover {
+    background-position: -670px -180px;
+}
+.client-lincoln {
+    background-position: -113px -180px;
+}
+.client-lincoln:hover {
+    background-position: -783px -180px;
+}
+.client-greystripe {
+    background-position: -242px -180px;
+    width: 160px;
+}
+.client-greystripe:hover {
+    background-position: -912px -180px;
+}
+.client-intel {
+    background-position: -410px -180px;
+    width: 90px;
+}
+.client-intel:hover {
+    background-position: -1080px -180px;
+}
+.client-lionfilms {
+    background-position: -510px -180px;
+    width: 134px;
+}
+.client-lionfilms:hover {
+    background-position: -1180px -180px;
+}
+
+
+.client-americanwater {
+    background-position: 0 -270px;
+}
+.client-americanwater:hover {
+    background-position: -670px -270px;
+}
+.client-goodwill {
+    background-position: -118px -270px;
+    width: 100px;
+}
+.client-goodwill:hover {
+    background-position: -788px -270px;
+}
+.client-dasher {
+    background-position: -240px -270px;
+}
+.client-dasher:hover {
+    background-position: -910px -270px;
+}
+.client-martini {
+    background-position: -370px -270px;
+    width: 170px;
+}
+.client-martini:hover {
+    background-position: -1040px -270px;
+}
+.client-senate {
+    background-position: -540px -270px;
+    width: 102px;
+}
+.client-senate:hover {
+    background-position: -1210px -270px;
+}
+
+.client-namco {
+    background-position: 0 -367px;
+    height: 80px;
+}
+.client-namco:hover {
+    background-position: -670px -367px;
+}
+.client-defibtech {
+    background-position: -120px -367px;
+    width: 150px;
+    height: 80px;
+}
+.client-defibtech:hover {
+    background-position: -790px -367px;
+}
+.client-webley {
+    background-position: -280px -367px;
+    height: 80px;
+}
+.client-webley:hover {
+    background-position: -950px -367px;
+}
+.client-half {
+    background-position: -403px -367px;
+    width: 130px;
+    height: 80px;
+}
+.client-half:hover {
+    background-position: -1073px -367px;
+}
+.client-fox {
+    background-position: -543px -367px;
+    width: 100px;
+    height: 80px;
+}
+.client-fox:hover {
+    background-position: -1204px -367px;
+}
+
+/* CUSTOM */
+
+/* Header */
+#header {
+    margin: 20px;
+}
+#header .logo {
+    margin: 10px;
+    float: left;
+}
+#header .info {
+    float: right;
+    font-size: 12px;
+    margin: 10px 0;
+}
+#header .info .phone {
+    border-right: 1px solid;
+    margin-right: 10px;
+    padding-right: 10px;
+}
+#header .info .login img {
+    margin-right: 5px;
+    position: relative;
+    top: -2px;
+}
+#header .menu {
+    clear: right;
+    float: right;
+}
+#header .menu ul li {
+    float: left;
+    list-style-image: none;
+    list-style-type: none;
+}
+#header .menu ul li.last a {
+    padding-right: 0;
+}
+#header .menu ul li a {
+    color: #484848;
+    display: block;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 10px 15px;
+}
+#header .menu ul li a.active {
+    color: #000000;
+    text-decoration: underline;
+}
+
+
+/* Hero */
+#hero {
+    height: 450px;
+    position: relative;
+    z-index: -10;
+}
+#hero .hero-inside {
+    position: absolute;
+}
+
+/* About */
+#about {
+    padding: 50px 20px;
+}
+#about .s-right img {
+    float: right;
+    margin: 20px;
+}
+
+/* Capabilities */
+#capabilities {
+    padding: 50px 20px;
+}
+#capabilities .top {
+    margin-bottom: 40px;
+}
+#capabilities .top h2 {
+    float: left;
+    margin-right: 20px;
+}
+#capabilities .top p {
+    color: #1F2C35;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: bold;
+    line-height: 33px;
+}
+#capabilities .bottom .inside {
+    margin: 20px 30px;
+}
+#capabilities .ability {}
+#capabilities .ability img {}
+#capabilities .ability p {}
+
+/* Clients */
+#clients {
+    padding: 50px 20px;
+}
+
+/* Quote */
+#quote {
+    padding: 50px 20px;
+}
+
+/* Footer */
+#footer {
+    padding: 50px 20px;
+}
+
+.slide {
+    position: relative;
+}
+.slide-vmware {}
+.slide-vmware .primary {
+    display: block;
+    margin: 0 auto;
+}
+.slide-vmware .tile {
+    position: absolute;
+}
+.slide-vmware .tile0 {
+    right: 29px;
+    top: 0;
+}
+.slide-vmware .tile1 {
+    right: 20px;
+    top: 0;
+}
+.slide-vmware .tile2 {
+    right: 33px;
+    top: 1px;
+}
+.slide-vmware .tile3 {
+    right: 34px;
+    top: 1px;
+}
+.slide-vmware .tile6 {
+    display: block;
+    right: 160px;
+    top: 1px;
+}
+     
+/* Landscape phone to portrait tablet */
+@media (max-width: 320px) { 
+
+  #header .logo {
+    margin: 10px auto;
+    float: none;
+    text-align: center;
+    width: 90%;
+  }
+  #header .info {
+    font-size: 12px;
+    float: none;
+    margin: 10px auto;
+    text-align: center;
+    width: 90%;
+  }
+  #header .menu {
+    clear: right;
+    float: none;
+    text-align: center;
+    width: 90%;
+  }
+  #about .block {
+    margin-bottom: 30px;
+  }
+
+}
+
+@media (min-width: 321px) and (max-width: 480px) {
+
+  #header .logo {
+    margin: 10px auto;
+    float: none;
+    text-align: center;
+    width: 90%;
+  }
+  #header .info {
+    font-size: 12px;
+    float: none;
+    margin: 10px auto;
+    text-align: center;
+    width: 90%;
+  }
+  #header .menu {
+    clear: right;
+    float: none;
+    text-align: center;
+    width: 90%;
+  }
+  #about .block {
+    margin-bottom: 30px;
+  }
+  #capabilities .ability {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  #capabilities .ability img {
+    width: 280px;
+  }
+
+}
+
+/* 440 */
+@media (min-width: 481px) and (max-width: 768px) {
+
+  body {
+    background-color: #FFFFFF;
+  }
+  #header .logo {
+    margin: 10px auto;
+    float: none;
+    text-align: center;
+    width: 90%;
+  }
+  #header .info {
+    font-size: 12px;
+    float: none;
+    margin: 10px auto;
+    text-align: center;
+    width: 90%;
+  }
+  #header .menu {
+    clear: right;
+    float: none;
+    text-align: center;
+    width: 90%;
+  }
+  #about .block {
+    margin-bottom: 30px;
+  }
+  #capabilities .ability {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  #capabilities .ability img {
+    width: 350px;
+  }
+
+}
+     
+/* Portrait tablet to landscape and desktop 724 */
+@media (min-width: 769px) and (max-width: 980px) {
+
+  #capabilities .bottom .inside {
+    margin: 20px 0;
+  }
+
+}
+     
+/* Large desktop 940 */
+@media (min-width: 981px) {
+  
+
+  
+}
+
+

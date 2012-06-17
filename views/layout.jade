@@ -1,0 +1,22 @@
+include mixins/blocks
+
+!!! html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap-responsive.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    
+  .scrollblock
+    
+    mixin header()
+    mixin flash()
+    block content
+    mixin quote()
+    mixin footer()
+     
+    script(type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js')
+    script(type='text/javascript', src='/javascripts/scrollorama.js')
+    script(type='text/javascript', src='/javascripts/scripts.js') 

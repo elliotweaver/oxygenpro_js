@@ -1,0 +1,139 @@
+mixin header()
+  #header
+    .container
+      .row
+        .span12
+          .inside
+            .logo
+              a(href='/')
+                img(src='/images/logo.png')
+            .info.t-grey-light
+              span.phone
+                | Phone: 866.894.6747
+              span.login
+                img(src='/images/lock.png')
+                a(href='/login', class='t-grey-light') Log in
+            .menu
+              ul
+                li.first
+                  a(href='/', class='active') Home
+                li
+                  a(href='/work') Work
+                li
+                  a(href='/clients') Clients
+                li
+                  a(href='/about') About
+                li.last
+                  a(href='#quote') Free Quote
+mixin flash()
+  #flash
+    .container
+      .row
+        .span12
+          .inside
+            
+            // alert
+            - if (session.flash.error.length)
+              div.alert.alert-error
+                h3
+                  | Errors
+                ul
+                  for alert in session.flash.error
+                    li #{alert}
+                      
+            // success
+            - if (session.flash.success.length)
+              div.alert.alert-success
+                h3
+                  | Success
+                ul
+                  for success in session.flash.success
+                    li #{success}
+              
+            // warning
+            - if (session.flash.warning.length)
+              div.alert
+                h3
+                  | Warning
+                ul
+                  for warning in session.flash.warning
+                    li #{warning}
+                    
+            // info
+            - if (session.flash.info.length)
+              div.alert.alert-info
+                h3
+                  | Info
+                ul
+                  for info in session.flash.info
+                    li #{info}
+
+mixin quote()
+  #quote
+    .container
+      .row
+        .span12
+          .inside
+            .block.top
+              span.bright
+                | Your search is over...
+              span.large
+                | The perfect solution is waiting for you
+      .row.bg-dots
+        .span4.visible-desktop
+          .inside
+            .block.proof
+              h2.title.bg-pink.t-white
+                | The Proof
+              .quotes
+                | {quotes go here}
+        .span8
+          .inside
+            .block.quote
+              h2.title.bg-pink.t-white
+                | Free Quote
+              span
+                | Or give us a quick buzz: 
+              span.bold
+                | Phone: 866.894.6747
+              .quoteform
+                form(method='post', action='')
+                  input(name='_method', value='PUT', type='hidden')
+                  input(name='quote[name]', placeholder='Name *')
+                  input(name='quote[company]', placeholder='Company')
+                  input(name='quote[url', placeholder='URL')
+                  input(name='quote[phone]', placeholder='Phone')
+                  input(name='quote[email]', placeholder='Email *')
+                  input(name='quote[deadline]', placeholder='Deadline')
+                  textarea(name='quote[comment]', placeholder='Short Description')
+                  select(name='quote['budget'])
+                    option(value='-none-') Budget
+                    option(value='8k-10k') 8k-10k
+                    option(value='10k-25k') 10k-25k
+                    option(value='25k-50k') 25k-50k
+                    option(value='50k-100k') 50k-100k
+                    option(value='100k') 100k+
+                  select(name='quote['type'])
+                    option(value='-none-') Project Type
+                    option(value='motion') Motion Graphics
+                    option(value='video') Video
+                  input(type='submit', value='Save', class='Send it!')
+
+mixin footer()
+  #footer.bg-footer
+    .container
+      .row
+        .span4
+          .inside
+            .block.screens
+              img(src='/images/screens.png')
+              span.bright
+                | Optimized For All Screens
+              span.light
+                | Resize your browser. It fits.
+        .span8
+          .inside
+            .block.copyright
+              img(src='/images/logo_dark.png')
+              span.copy
+                | Web, Flash and Video production studio located in Silicon Valley, California. Specializing in Flash Presentations and Motion Graphics. Copyright © 2000-2012 Oxygen Productions, Inc.  All rights reserved

@@ -31,7 +31,7 @@ exports.add = add;
 /** create **/
 var create = function(req, res, next) {
   lib.model.validate(req, function() {
-    if (!lib.common.isempty(req.session.form.errors)) {
+    if (!lib.common.e(req.session.form.errors)) {
       res.render('admin/'+lp+'/form', { title: 'Add '+us, method: 'post' });
       next();
     }
@@ -63,7 +63,7 @@ var edit = function(req, res, next) {
       req.session.alert.error.push( err );
       res.redirect('admin/'+lp);
     }
-    else if (lib.common.isempty(docs)) {
+    else if (lib.common.e(docs)) {
       req.session.alert.error.push( 'Unknown ID' );
       res.redirect('admin/'+lp);
     }
@@ -80,7 +80,7 @@ exports.edit = edit;
 /** update **/
 var update = function(req, res, next) {
   lib.model.validate(req, function(report) {
-    if (!lib.common.isempty(req.session.form.errors)) {
+    if (!lib.common.e(req.session.form.errors)) {
       res.render('admin/'+lp+'/form', { title: 'Edit '+us, method: 'put' });
       next();
     }

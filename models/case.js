@@ -6,8 +6,9 @@ var Case = new Schema({
     name              : String
   , title             : String
   , description       : String
-  , category          : [String]
+  , categories        : [String]
   , image             : String
+  , quick			  : String
   , created           : {type: Date, default: Date.now}
   , updated           : {type: Date, default: Date.now}
   , status            : {type: Number, default: 1}

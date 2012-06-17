@@ -1,4 +1,4 @@
-mixin header()
+mixin header(type)
   #header
     .container
       .row
@@ -15,14 +15,36 @@ mixin header()
                 a(href='/login', class='t-grey-light') Log in
             .menu
               ul
-                li.first
-                  a(href='/', class='active') Home
-                li
-                  a(href='/work') Work
-                li
-                  a(href='/clients') Clients
-                li
-                  a(href='/about') About
+                - if (type == 'home')
+                  li.first
+                    a(href='/', class='active') Home
+                - else
+                  li.first
+                    a(href='/') Home
+                - if (type == 'work')
+                  li
+                    a(href='/work', class='active') Work
+                - else
+                  li
+                    a(href='/work') Work
+                - if (type == 'clients')
+                  li
+                    a(href='/clients', class='active') Clients
+                - else
+                  li
+                    a(href='/clients') Clients
+                - if (type == 'about')
+                  li
+                    a(href='/about', class='active') About
+                - else
+                  li
+                    a(href='/about') About
+                - if (type == 'blog')
+                  li
+                    a(href='/blog', class='active') Blog
+                - else
+                  li
+                    a(href='/blog') Blog
                 li.last
                   a(href='#quote') Free Quote
 mixin flash()

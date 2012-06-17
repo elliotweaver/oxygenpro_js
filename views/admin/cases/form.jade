@@ -8,14 +8,14 @@ block content
   
   h1= title
   
-  mixin helpmenu_back('leads')
+  mixin helpmenu_back('cases')
   
   .form
-    form(action='', method='post', class='form-horizontal')
+    form(action='', method='post', class='form-horizontal', enctype='multipart/form-data')
       mixin method(method)
       mixin csrf(token)
       table.table.table-bordered.table-striped
-        mixin thead( [ 'Lead' ] )
+        mixin thead( [ 'Case' ] )
         tbody
           - if (method == 'put')
             tr
@@ -23,9 +23,21 @@ block content
                 mixin disabled('id', 'ID', session.form.values.id, session.form.errors.id, '')
           tr
             td
-              mixin input('text', 'request', 'Request', session.form.values.request, session.form.errors.request, 'request id', true)
+              mixin input('text', 'name', 'Name', session.form.values.name, session.form.errors.name, '', true)
           tr
             td
-              mixin input('text', 'contractor', 'Contractor', session.form.values.contractor, session.form.errors.contractor, 'contractor id', true) 
+              mixin input('text', 'title', 'Title', session.form.values.title, session.form.errors.title, '', true)  
+          tr
+            td
+              mixin textarea('description', 'Description', session.form.values.description, session.form.errors.description, '')
+          tr
+            td
+              mixin input('text', 'categories', 'Categories', session.form.values.categories, session.form.errors.categories, '')
+          tr
+            td
+              mixin file('image', 'Image', session.form.values.image, session.form.errors.image, '')
+          tr
+            td
+              mixin textarea('quick', 'Quick Text', session.form.values.quick, session.form.errors.quick, '')
       mixin actions(method)
             

@@ -1,13 +1,25 @@
-extends layout
+include mixins/blocks
 
-block content
-  
+!!! html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap-responsive.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    
+  mixin header('work')
+  mixin flash()
+    
   #subheader
     .container
       .row
         .span12
           .inside
-            .title
+            .sep
+              img(src='/images/sep_top.png')
+            .title2
               h1
                 | Work
             .submenu
@@ -15,7 +27,7 @@ block content
                 li
                   a(href='#case-studies')
                     | Case Studies
-                li
+                li.last
                   a(href='#projects')
                     | Projects
 
@@ -25,13 +37,39 @@ block content
       .row
         .span12
           .inside
-            .title
-              h2
+            .head-inline
+              h2.title-pink
                 | Case Studies
-            .subtitle
-              | lorem ipsum
+              .subtitle
+                | lorem ipsum
             .cases
-              | test
+              .wrapper
+                .hider
+                  img(src='/images/hider.png')
+                .inner
+                  - var i = 0;
+                  - for cs in cases
+                    - i++;
+                    div(class='cs cs-#{i}')
+                      .image
+                        img(src='/images/#{cs.image}')
+                      .info
+                        .text
+                          #{cs.quick}
+                        
+                .cs-pager
+                  .left
+                    img(src='/images/arrow_grey_left.png')
+                  .dots
+                    - var i = 0;
+                    - for cs in cases
+                      - i++;
+                      - if (i == 1)
+                        div(class="active cs-dot cs-dot-#{i}")
+                      - else
+                        div(class="inactive cs-dot cs-dot-#{i}")
+                  .right
+                    img(src='/images/arrow_grey_right.png')
               
   
   a(name='projects')
@@ -40,11 +78,11 @@ block content
       .row
         .span12
           .inside
-            .title
-              h2
+            .head-inline
+              h2.title-pink
                 | projects
-            .subtitle
-              | lorem ipsum
+              .subtitle
+                | lorem ipsum
             .projects
               - var i = 0;
               - for project in projects
@@ -57,3 +95,12 @@ block content
                       | #{project.name}
                     .description
                       | #{project.description}
+    
+    
+    mixin quote()
+    mixin footer()
+     
+    script(type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js')
+    script(type='text/javascript', src='/javascripts/cs.js') 
+  
+  

@@ -9,9 +9,9 @@ exports.index = function(req, res) {
 };
 
 exports.work = function(req, res) {
-  Cases.find({}).where('status', 1).sort('position', 1).exec(function(err, cases) {
-    Projects.find({}).where('status', 1).sort('position', 1).exec(function(err, projects) {
-      res.render('work', { title: 'Work', cases: cases, projects: projects });
+  Cases.find({}).where('status', 1).sort('updated', -1).exec(function(err, cases) {
+    Projects.find({}).where('status', 1).sort('updated', -1).exec(function(err, projects) {
+    	res.render('work', { title: 'Work', cases: cases, projects: projects });
     });
   });
 };

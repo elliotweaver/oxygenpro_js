@@ -7,17 +7,17 @@ include ../../mixins/menus
 block content
   h1= title
   
-  mixin helpmenu_add('Leads', 'leads')
+  mixin helpmenu_add('Case', 'cases')
   
   mixin pager(pager)
   
   table.table.table-bordered.table-striped
-    mixin thead([ '', 'id', 'request id', 'contractor id', 'updated' ])
+    mixin thead([ '', 'id', 'name', 'title', 'updated' ])
     tbody
       - if (!rows.length)
-        mixin tr_empty('Leads', 'leads', 5)
+        mixin tr_empty('Case', 'cases', 5)
       - else
         each row in rows
-          mixin tr_op( [ 'op', row._id, row.request, row.contractor, row.updated ], row, 'leads' )
+          mixin tr_op( [ 'op', row._id, row.name, row.title, row.updated ], row, 'cases' )
               
   mixin pager(pager)

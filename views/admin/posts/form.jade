@@ -1,0 +1,52 @@
+extends ../layout
+
+include ../../mixins/forms
+include ../../mixins/menus
+include ../../mixins/tables
+
+block content
+  
+  h1= title
+  
+  mixin helpmenu_back('posts')
+  
+  .form
+    form(action='', method='post', class='form-horizontal', enctype='multipart/form-data')
+      mixin method(method)
+      mixin csrf(token)
+      table.table.table-bordered.table-striped
+        mixin thead( [ 'Post' ] )
+        tbody
+          - if (method == 'put')
+            tr
+              td
+                mixin disabled('id', 'ID', session.form.values.id, session.form.errors.id, '')
+          tr
+            td
+              mixin input('text', 'title', 'Title', session.form.values.title, session.form.errors.title, '', true)
+          tr
+            td
+              mixin input('text', 'slug', 'Slug', session.form.values.slug, session.form.errors.slug, '', true)
+          tr
+            td
+              mixin checkbox('featured', 'Featured', '1', session.form.values.featured, session.form.errors.featured, '', true)
+          tr
+            td
+              mixin input('text', 'tags', 'Tags', session.form.values.tags, session.form.errors.tags, '')
+          tr
+            td
+              mixin input('text', 'author', 'Author', session.form.values.author, session.form.errors.author, '')
+          tr
+            td
+              mixin file('image', 'Image', session.form.values.image, session.form.errors.image, '')  
+          tr
+            td
+              mixin textarea('post', 'Post', session.form.values.post, session.form.errors.post, '')
+          tr
+            td
+              mixin textarea('summary', 'Summary', session.form.values.summary, session.form.errors.summary, '')
+      mixin actions(method)
+            
+  script(type='text/javascript')
+    CKEDITOR.replace( 'post' );
+    CKEDITOR.replace( 'summary' );

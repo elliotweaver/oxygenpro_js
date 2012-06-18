@@ -4,6 +4,7 @@ var Projects = require('../models/project.js')
   , email = require('mailer');
 
 exports.admin = require('./admin');
+exports.blog = require('./blog');
 
 exports.index = function(req, res) {
   res.render('index', { title: 'Oxygen Productions' });

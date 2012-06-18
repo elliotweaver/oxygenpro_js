@@ -165,6 +165,33 @@ mixin quote()
                     option(value='video') Video
                   input(type='submit', value='Send it!', class='send')
 
+mixin blog_side(featured)
+  .sidebar
+    .featured.block
+      h2
+        | Highlights
+      - for feature in featured
+        .feature
+          .name
+            | #{feature.title}
+          .star
+            img(src='/images/star.png')
+          .date
+            - var date = new Date(feature.created); var d = date.getMonth() + '.' + date.getDate() + '.' + date.getFullYear();
+            | #{d}
+          .more
+            a(href='/blog/#{feature.slug}') Read
+            
+    .tags.block.last
+      h2
+        | Tags
+      a(href='') HTML5
+      a(href='') Drupal
+      a(href='') Video
+      a(href='') Development
+      a(href='') Design
+    
+
 mixin footer()
   #footer.bg-footer
     .container

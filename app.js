@@ -81,6 +81,16 @@ app.put ('/admin/cases/:id/edit', common.flashInit, routes.admin.cases.update, c
 app.get ('/admin/cases/:id/delete', common.flashInit, routes.admin.cases.del, common.flashFlush);
 app.del ('/admin/cases/:id/delete', common.flashInit, routes.admin.cases.destroy, common.flashFlush);
 
+/** /admin/posts **/
+app.get ('/admin/posts', common.flashInit, routes.admin.posts.index, common.flashFlush);
+app.get ('/admin/posts/add', common.flashInit, routes.admin.posts.add, common.flashFlush);
+app.post('/admin/posts/add', common.flashInit, routes.admin.posts.create, common.flashFlush);
+app.get ('/admin/posts/:id', common.flashInit, routes.admin.posts.show, common.flashFlush);
+app.get ('/admin/posts/:id/edit', common.flashInit, routes.admin.posts.edit, common.flashFlush);
+app.put ('/admin/posts/:id/edit', common.flashInit, routes.admin.posts.update, common.flashFlush);
+app.get ('/admin/posts/:id/delete', common.flashInit, routes.admin.posts.del, common.flashFlush);
+app.del ('/admin/posts/:id/delete', common.flashInit, routes.admin.posts.destroy, common.flashFlush);
+
 http.createServer(app).listen(app.get('port'), function() {
   console.log("Express server listening on port " + app.get('port'));
 });

@@ -859,6 +859,110 @@ clear: both;
     margin-bottom: 50px;
 }
 
+#blog {
+    margin-top: 50px;
+}
+#blog .posts {}
+#blog .posts .post {
+    margin-bottom: 50px;
+}
+#blog .posts .post h2 {}
+#blog .posts .post h2 a {
+    color: #3A4147;
+    font-size: 35px;
+}
+#blog .posts .post .meta {
+    margin: 10px 0 20px 0;
+    overflow: hidden;
+}
+#blog .posts .post .date {
+    background: none repeat scroll 0 0 #FF0144;
+    color: #FFFFFF;
+    float: left;
+    font-size: 13px;
+    font-weight: bold;
+    margin-right: 10px;
+    padding: 5px 10px;
+}
+#blog .posts .post .author {
+    color: #65696C;
+    float: left;
+    font-size: 13px;
+    line-height: 23px;
+    margin-left: 10px;
+}
+#blog .posts .post .summary {}
+#blog .posts .post .summary .text p {
+    color: #5F686F;
+    margin: 20px 0 0;
+}
+#blog .posts .post .summary .more {
+    font-size: 13px;
+    margin-top: 3px;
+}
+#blog .posts .post .summary .more a {}
+#blog .posts .post .tags {
+    background: none repeat scroll 0 0 #FBFBFB;
+    border-bottom: 1px solid #B9B9B9;
+    border-top: 1px solid #B9B9B9;
+    color: #62676D;
+    font-size: 13px;
+    margin: 20px 0 10px;
+    padding: 10px;
+}
+#blog .posts .post .tags a {
+    padding: 0 4px;
+}
+#blog .sidebar {}
+#blog .sidebar .featured {}
+#blog .sidebar .feature {
+    clear: both;
+    color: #74858D;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+#blog .sidebar .feature .name {
+    font-weight: bold;
+    font-size: 15px;
+}
+#blog .sidebar .feature .star {
+    float: left;
+    margin-right: 5px;
+}
+#blog .sidebar .feature .date {
+    float: left;
+    line-height: 20px;
+    margin-right: 10px;
+}
+#blog .sidebar .feature .more {
+    line-height: 20px;
+}
+#blog .sidebar .feature .more a {}
+#blog .sidebar .tags {}
+#blog .sidebar .tags a {
+    background: none repeat scroll 0 0 #FF0044;
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    font-size: 13px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    padding: 5px;
+}
+.sidebar h2 {
+    color: #3C4147;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+.sidebar .block {
+    border-bottom: 1px solid #BBBDBC;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+.sidebar .block.last {
+    border-bottom: medium none;
+}
+
 #leadership {
     margin-bottom: 50px;
 }

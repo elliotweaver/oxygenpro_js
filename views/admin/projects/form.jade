@@ -20,37 +20,37 @@ block content
           - if (method == 'put')
             tr
               td
-                mixin disabled('id', 'ID', session.form.values.id, session.form.errors.id, '')
+                mixin disabled('id', 'ID', sess.form.values.id, sess.form.errors.id, '')
           tr
             td
-              mixin input('text', 'name', 'Name', session.form.values.name, session.form.errors.name, '', true)
+              mixin input('text', 'name', 'Name', sess.form.values.name, sess.form.errors.name, '', true)
           tr
             td
-              mixin input('text', 'title', 'Title', session.form.values.title, session.form.errors.title, '', true)  
+              mixin input('text', 'title', 'Title', sess.form.values.title, sess.form.errors.title, '', true)  
           tr
             td
-              mixin textarea('description', 'Description', session.form.values.description, session.form.errors.description, '')
+              mixin textarea('description', 'Description', sess.form.values.description, sess.form.errors.description, '')
           tr
             td
-              mixin input('text', 'categories', 'Categories', session.form.values.categories, session.form.errors.categories, '')
+              mixin input('text', 'categories', 'Categories', sess.form.values.categories, sess.form.errors.categories, '')
           tr
             td
-              mixin file('image', 'Image', session.form.values.image, session.form.errors.image, '')
+              mixin file('image', 'Image', sess.form.values.image, sess.form.errors.image, '')
           tr
             td
-              mixin input('text', 'video', 'Video', session.form.values.video, session.form.errors.video, '')
+              mixin input('text', 'video', 'Video', sess.form.values.video, sess.form.errors.video, '')
           tr
             td
-              mixin input('text', 'link', 'Link', session.form.values.link, session.form.errors.link, '')
+              mixin input('text', 'link', 'Link', sess.form.values.link, sess.form.errors.link, '')
           tr
             td
-              mixin file('photo', 'Photo', session.form.values.photo, session.form.errors.photo, '')
+              mixin file('photo', 'Photo', sess.form.values.photo, sess.form.errors.photo, '')
           tr
             td
-              mixin input('text', 'qtitle', 'Quick Title', session.form.values.qtitle, session.form.errors.qtitle, '', true)  
+              mixin input('text', 'qtitle', 'Quick Title', sess.form.values.qtitle, sess.form.errors.qtitle, '', true)  
           tr
             td
-              mixin textarea('quick', 'Quick Text', session.form.values.quick, session.form.errors.quick, '')
+              mixin textarea('quick', 'Quick Text', sess.form.values.quick, sess.form.errors.quick, '')
       mixin actions(method)
             
   script(type='text/javascript')

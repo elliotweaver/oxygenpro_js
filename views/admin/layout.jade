@@ -35,39 +35,39 @@ html
             .inside
               
               // alert
-              - if (session.flash.error.length)
+              - if (sess.flash.error.length)
                 div.alert.alert-error
                   h3
                     | Errors
                   ul
-                    for alert in session.flash.error
+                    for alert in sess.flash.error
                       li #{alert}
                       
               // success
-              - if (session.flash.success.length)
+              - if (sess.flash.success.length)
                 div.alert.alert-success
                   h3
                     | Success
                   ul
-                    for success in session.flash.success
+                    for success in sess.flash.success
                       li #{success}
               
               // warning
-              - if (session.flash.warning.length)
+              - if (sess.flash.warning.length)
                 div.alert
                   h3
                     | Warning
                   ul
-                    for warning in session.flash.warning
+                    for warning in sess.flash.warning
                       li #{warning}
                       
               // info
-              - if (session.flash.info.length)
+              - if (sess.flash.info.length)
                 div.alert.alert-info
                   h3
                     | Info
                   ul
-                    for info in session.flash.info
+                    for info in sess.flash.info
                       li #{info}
 
     

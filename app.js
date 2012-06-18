@@ -29,7 +29,7 @@ app.configure(function(){
   app.use(app.router);
   app.use(express.static(__dirname + '/public'));
   app.locals.use(function(req, res) {
-    res.locals.session = req.session;
+    res.locals.sess = req.session;
     res.locals.token = req.session._csrf;
   });
 });

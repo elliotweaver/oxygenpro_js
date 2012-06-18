@@ -20,31 +20,31 @@ block content
           - if (method == 'put')
             tr
               td
-                mixin disabled('id', 'ID', session.form.values.id, session.form.errors.id, '')
+                mixin disabled('id', 'ID', sess.form.values.id, sess.form.errors.id, '')
           tr
             td
-              mixin input('text', 'title', 'Title', session.form.values.title, session.form.errors.title, '', true)
+              mixin input('text', 'title', 'Title', sess.form.values.title, sess.form.errors.title, '', true)
           tr
             td
-              mixin input('text', 'slug', 'Slug', session.form.values.slug, session.form.errors.slug, '', true)
+              mixin input('text', 'slug', 'Slug', sess.form.values.slug, sess.form.errors.slug, '', true)
           tr
             td
-              mixin checkbox('featured', 'Featured', '1', session.form.values.featured, session.form.errors.featured, '', true)
+              mixin checkbox('featured', 'Featured', '1', sess.form.values.featured, sess.form.errors.featured, '', true)
           tr
             td
-              mixin input('text', 'tags', 'Tags', session.form.values.tags, session.form.errors.tags, '')
+              mixin input('text', 'tags', 'Tags', sess.form.values.tags, sess.form.errors.tags, '')
           tr
             td
-              mixin input('text', 'author', 'Author', session.form.values.author, session.form.errors.author, '')
+              mixin input('text', 'author', 'Author', sess.form.values.author, sess.form.errors.author, '')
           tr
             td
-              mixin file('image', 'Image', session.form.values.image, session.form.errors.image, '')  
+              mixin file('image', 'Image', sess.form.values.image, sess.form.errors.image, '')  
           tr
             td
-              mixin textarea('post', 'Post', session.form.values.post, session.form.errors.post, '')
+              mixin textarea('post', 'Post', sess.form.values.post, sess.form.errors.post, '')
           tr
             td
-              mixin textarea('summary', 'Summary', session.form.values.summary, session.form.errors.summary, '')
+              mixin textarea('summary', 'Summary', sess.form.values.summary, sess.form.errors.summary, '')
       mixin actions(method)
             
   script(type='text/javascript')

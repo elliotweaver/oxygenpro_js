@@ -34,30 +34,33 @@ html
               .span8
                 .inside
                   .posts
-                    - for post in posts
-                      .post
-                        h2
-                          a(href='/blog/#{post.slug}') !{post.title}
-                        .meta
-                          .date
-                            - var date = new Date(post.created);
-                            - var d = date.getMonth() + '.' + date.getDate() + '.' + date.getFullYear();
-                            | #{d}
-                          .author
-                            | By: #{post.author}
-                        .summary
-                          .text
-                            | !{post.summary}
-                          .more
-                            a(href='/blog/#{post.slug}') read more...
-                        .tags
-                          | Tags: 
-                          - var i = 0;
-                          - for tag in post.tags
-                            - if (i != 0)
-                              | /
-                            - i++;
-                            a(href='#') #{tag}
+                    - if (posts == 'none')
+                     | No matching posts
+                    - else
+                      - for post in posts
+                        .post
+                          h2
+                            a(href='/blog/#{post.slug}') !{post.title}
+                          .meta
+                            .date
+                              - var date = new Date(post.created);
+                              - var d = date.getMonth() + '.' + date.getDate() + '.' + date.getFullYear();
+                              | #{d}
+                            .author
+                              | By: #{post.author}
+                          .summary
+                            .text
+                              | !{post.summary}
+                            .more
+                              a(href='/blog/#{post.slug}') read more...
+                          .tags
+                            | Tags: 
+                            - var i = 0;
+                            - for tag in post.tags
+                              - if (i != 0)
+                                | /
+                              - i++;
+                              a(href='#') #{tag}
                             
               .span4
                 .inside

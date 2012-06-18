@@ -12,6 +12,8 @@ var Project = new Schema({
   , video             : String
   , link              : String
   , photo             : String
+  , qtitle			  : String
+  , quick			  : String
   , position          : {type: Number, default: 0}
   , created           : {type: Date, default: Date.now}
   , updated           : {type: Date, default: Date.now}

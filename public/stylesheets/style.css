@@ -101,7 +101,8 @@ h3 {
 
 /* Background Images */
 .bg-dots {
-    background: url('/images/bg-dots.jpg') no-repeat scroll right bottom transparent;
+    background: url("/images/bg-dots.jpg") no-repeat scroll right bottom transparent;
+    height: 320px;
 }
 .bg-gradient-grey {
     background: url('/images/bg-gradient-grey.png') repeat-x scroll center top #474e56;
@@ -482,7 +483,7 @@ h3 {
 
 /* Quote */
 #quote {
-    padding: 50px 20px;
+    padding: 50px 20px 0;
 }
 
 /* Footer */
@@ -523,8 +524,14 @@ h3 {
     top: 1px;
 }
 
+.goto-top {
+    clear: both;
+    font-weight: bold;
+    text-align: right;
+}
+
 #case-studies {
-    margin: 50px 0;
+    margin: 70px 0;
 }
 #case-studies .hider {
     position: absolute;
@@ -593,6 +600,186 @@ h3 {
     padding: 20px;
 }
 
+.sep-large {
+    margin-top: 30px;
+    overflow: hidden;
+}
+.sep-large .inner {
+    height: 90px;
+}
+
+#projects {
+    margin: 60px 0;
+}
+#projects .project {
+    float: left;
+    position: relative;
+    margin-bottom: 20px;
+    margin-right: 30px;
+    cursor: pointer;
+}
+#projects .project .image {}
+#projects .project .text {
+    background: url("../images/dark_left.jpg") repeat scroll 0 0 transparent;
+    height: 165px;
+    color: #FFFFFF;
+    position: absolute;
+    top: 0;
+    display: none;
+    width: 293px;
+    z-index: 1;
+    opacity: 0;
+}
+#projects .project .text .qtitle {
+    border-bottom: 1px solid;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 25px 25px 10px;
+    padding-bottom: 10px;
+}
+#projects .project .text .quick {
+    margin: 15px 25px;
+}
+#projects .project .hover {
+    display: block;
+}
+#projects .project-3 .text {
+    background: url("../images/dark_right.jpg") repeat scroll 0 0 transparent;
+}
+#projects .project-3 {
+    margin-right: 0;
+}
+
+.quote-top {}
+.quote-top .text1 {
+    color: #FF0143;
+    font-size: 25px;
+    font-style: italic;
+    left: 180px;
+    position: relative;
+}
+.quote-top .text2 {
+    color: #181818;
+    font-size: 36px;
+    font-style: italic;
+    font-weight: bold;
+    left: 100px;
+    position: relative;
+}
+.quote-top .text3 {
+    left: 760px;
+    position: absolute;
+    top: 45px;
+}
+
+.proof {
+    border-right: 1px dotted #8C8C8C;
+    width: 333px;
+}
+.quotes {
+    background: url("../images/quote.png") no-repeat scroll 0 0 transparent;
+    margin-top: 20px;
+    min-height: 188px;
+    min-width: 308px;
+    position: relative;
+}
+.quotes .quote {
+    display: none;
+}
+.quotes .quote .text {
+    color: #FFFFFF;
+    font-family: tahoma;
+    font-size: 16px;
+    height: 120px;
+    line-height: 23px;
+    padding: 20px;
+}
+.quotes .quote .by {
+    color: #FF0143;
+    font-size: 13px;
+    font-weight: bold;
+    margin-left: 75px;
+    margin-top: 25px;
+}
+.quotes .quote.active {
+    display: block;
+}
+.quotes .q-pager {
+    top: 198px;
+    position: absolute;
+}
+.quotes .q-pager .dot {
+    float: left;
+    height: 9px;
+    margin: 0 3px;
+    width: 9px;
+}
+.quotes .q-pager .dot.active {
+    background: url("../images/dot_active.png") no-repeat scroll 0 0 transparent;
+}
+.quotes .q-pager .dot.inactive {
+    background: url("../images/dot_inactive.png") no-repeat scroll 0 0 transparent;
+}
+
+.quoteform {
+    margin-top: 20px;
+}
+.quoteform input, .quoteform select, .quoteform textarea {
+    float: left;
+    margin-right: 10px;
+    width: 250px;
+}
+.quoteform textarea {
+    height: 100px;
+}
+.quoteform .send {
+    background-image: linear-gradient(bottom, rgb(54,64,72) 5%, rgb(73,88,98) 53%);
+    background-image: -o-linear-gradient(bottom, rgb(54,64,72) 5%, rgb(73,88,98) 53%);
+    background-image: -moz-linear-gradient(bottom, rgb(54,64,72) 5%, rgb(73,88,98) 53%);
+    background-image: -webkit-linear-gradient(bottom, rgb(54,64,72) 5%, rgb(73,88,98) 53%);
+    background-image: -ms-linear-gradient(bottom, rgb(54,64,72) 5%, rgb(73,88,98) 53%);
+    background-image: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      color-stop(0.05, rgb(54,64,72)),
+      color-stop(0.53, rgb(73,88,98))
+    );
+    border: 1px solid #3C4850;
+    box-shadow: 0 1px 1px #6D8393 inset;
+    -webkit-box-shadow: 0 1px 1px #6D8393 inset;
+    -moz-box-shadow: 0 1px 1px #6D8393 inset;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 20px;
+    text-shadow: 1px 1px #666666;
+    -webkit-text-shadow: 1px 1px #666666;
+    -moz-text-shadow: 1px 1px #666666;
+    width: auto;
+}
+
+input, textarea, select, *:-moz-placeholder {
+    background-image: linear-gradient(bottom, rgb(250,250,250) 5%, rgb(221,223,227) 53%);
+    background-image: -o-linear-gradient(bottom, rgb(250,250,250) 5%, rgb(221,223,227) 53%);
+    background-image: -moz-linear-gradient(bottom, rgb(250,250,250) 5%, rgb(221,223,227) 53%);
+    background-image: -webkit-linear-gradient(bottom, rgb(250,250,250) 5%, rgb(221,223,227) 53%);
+    background-image: -ms-linear-gradient(bottom, rgb(250,250,250) 5%, rgb(221,223,227) 53%);
+    
+    background-image: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      color-stop(0.05, rgb(250,250,250)),
+      color-stop(0.53, rgb(221,223,227))
+    );
+    border: 1px solid #919498;
+    box-shadow: 1px 1px 1px #FFFFFF inset;
+    -webkit-box-shadow: 1px 1px 1px #FFFFFF inset;
+    -moz-box-shadow: 1px 1px 1px #FFFFFF inset;
+    color: #2A353F;
+}
+
 .head-inline {
 clear: both;
     margin-bottom: 20px;
@@ -609,6 +796,108 @@ clear: both;
     font-weight: bold;
     line-height: 32px;
     margin-left: 20px;
+}
+
+#capabilities {}
+#capabilities .items {
+    overflow: visible;
+    width: 570px;
+}
+#capabilities .items .item {
+    background: url("../images/item_grey.jpg") repeat scroll 0 0 transparent;
+    height: 74px;
+    width: 267px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    float: left;
+    cursor: pointer;
+}
+#capabilities .items .item.hover {
+    background: url("../images/item_dark.jpg") repeat scroll 0 0 transparent;
+}
+#capabilities .items .item .text {
+    color: #373F47;
+    display: table-cell;
+    font-size: 18px;
+    height: 74px;
+    padding: 0 25px;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+#capabilities .items .item.hover .text {
+    display: none;
+}
+#capabilities .items .item .over {
+    display: none;
+    color: #FFFFFF;
+    font-size: 13px;
+    height: 74px;
+    padding: 0 25px;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+#capabilities .items .item.hover .over {
+    display: table-cell;
+}
+#capabilities h3 {
+    color: #1F2C35;
+    font-size: 27px;
+    line-height: 35px;
+    margin: 10px 40px 10px 0;
+}
+#capabilities p {
+    border-bottom: 1px solid #B9BDBE;
+    border-top: 1px solid #B9BDBE;
+    color: #7E848B;
+    margin-top: 30px;
+    margin-right: 30px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+#process {
+    margin-bottom: 50px;
+}
+
+#leadership {
+    margin-bottom: 50px;
+}
+#leadership .items .item {
+    float: left;
+    color: #FFFFFF;
+    height: 216px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    width: 215px;
+    position: relative;
+    cursor: pointer;
+}
+#leadership .items .item-blank {
+    background: url("../images/square_grey.jpg") repeat scroll 0 0 transparent;
+}
+#leadership .items .item .text {
+    background: url("../images/square_pink.png") repeat scroll 0 0 transparent;
+    height: 216px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 215px;
+    z-index: 1;
+    opacity: 0;
+}
+#leadership .items .item .text .name {
+    font-size: 19px;
+    margin: 25px 5px 0 20px;
+    text-transform: uppercase;
+}
+#leadership .items .item .text .t {
+    font-size: 13px;
+    font-weight: bold;
+    margin: 0 5px 7px 20px;
+}
+#leadership .items .item .text .desc {
+    font-size: 12px;
+    margin: 0 21px;
 }
 
 #subheader {
@@ -628,7 +917,7 @@ margin-bottom: 20px;
 }
 #subheader .title2 h1 {
 color: #B1B3B5;
-    font-size: 45px;
+    font-size: 50px;
     line-height: 53px;
     position: relative;
     text-transform: uppercase;

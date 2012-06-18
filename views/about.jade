@@ -1,4 +1,205 @@
-extends layout
+include mixins/blocks
 
-block content
-  a
+!!! html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap-responsive.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    
+    a(name='top')
+    
+    mixin header('about')
+    mixin flash()
+    
+    #subheader
+      .container
+        .row
+          .span12
+            .inside
+              .sep
+                img(src='/images/sep_top.png')
+              .title2
+                h1
+                  | About Us
+              .submenu
+                ul
+                  li.first
+                    a(href='#capabilities')
+                      | Capabilities
+                  li
+                    a(href='#process')
+                      | Process
+                  li.last
+                    a(href='#leadership')
+                      | Leadership
+                      
+    a(name='capabilities')
+    #capabilities
+      .container
+        .row
+          .span5
+            .inside
+              .head-inline
+                h2.title-pink
+                  | Capabilties
+              h3
+                | Design, development, and everything in between.
+              p
+                | We are known for our unique ability to make the obscure palatable, but much more than that, we are strategic marketers with over 12 years of digital experience that gives us insight into the minds of the digital consumer.  From solving complex marketing challenges to defining brands and growing businesses, Oxygen does it all.
+          .span7
+            .inside
+              .items
+                .item
+                  .text
+                    | Web Design & Development
+                  .over
+                    | Lorem ipsum cola dolar qu siva.
+                .item
+                  .text
+                    | Performance Marketing
+                  .over
+                    | Lorem ipsum cola dolar qu siva.
+                .item
+                  .text
+                    | Motion Graphics
+                  .over
+                    | Lorem ipsum cola dolar qu siva.
+                .item
+                  .text
+                    | Social Marketing
+                  .over
+                    | Lorem ipsum cola dolar qu siva.
+                .item
+                  .text
+                    | Web Design & Development
+                  .over
+                    | Lorem ipsum cola dolar qu siva.
+                .item
+                  .text
+                    | Performance Marketing
+                  .over
+                    | Lorem ipsum cola dolar qu siva.
+                .item
+                  .text
+                    | Motion Graphics
+                  .over
+                    | Lorem ipsum cola dolar qu siva.
+                .item
+                  .text
+                    | Social Marketing
+                  .over
+                    | Lorem ipsum cola dolar qu siva.
+                .item
+                  .text
+                    | Web Design & Development
+                  .over
+                    | Lorem ipsum cola dolar qu siva.
+                .item
+                  .text
+                    | Performance Marketing
+                  .over
+                    | Lorem ipsum cola dolar qu siva.
+                .item
+                  .text
+                    | Motion Graphics
+                  .over
+                    | Lorem ipsum cola dolar qu siva.
+                .item
+                  .text
+                    | Social Marketing
+                  .over
+                    | Lorem ipsum cola dolar qu siva.
+            
+    a(name='process')
+    #process
+      .container
+        .row
+          .span12
+            .inside
+              .sep-large
+                .inner
+                  img(src='/images/sep_large.png')
+              .head-inline
+                h2.title-pink
+                  | Process
+                .subtitle
+                  | luptatem en thoe runde accusantium thoisy
+              .image
+                img(src='/images/process.png')
+              .goto-top
+                a(href='#top')
+                  | Top 
+                  img(src='/images/arrow_up.png')
+            
+    a(name='leadership')
+    #leadership
+      .container
+        .row
+          .span12
+            .inside
+              .sep-large
+                .inner
+                  img(src='/images/sep_large.png')
+              .head-inline
+                h2.title-pink
+                  | Leadership
+                .subtitle
+                  | luptatem en thoe runde accusantium thoisy
+              .items
+                .item.item-pat.item-left
+                  .image
+                    img(src='/images/pat.jpg')
+                  .text
+                    .name
+                      | Patrick
+                    .t
+                      | Really Cool Guy
+                    .desc
+                      | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Unds nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+                .item.item-blank
+                .item.item-elliot.item-left
+                  .image
+                    img(src='/images/elliot.jpg')
+                  .text
+                    .name
+                      | Elliot Weaver
+                    .t
+                      | Director of Technology
+                    .desc
+                      | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Unds nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+                .item.item-blank
+                .item.item-blank
+                .item.item-ron.item-right
+                  .image
+                    img(src='/images/ron.jpg')
+                  .text
+                    .name
+                      | Ron Fugelseth
+                    .t
+                      | Art Director
+                    .desc
+                      | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Unds nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+                .item.item-blank
+                .item.item-janet.item-right
+                  .image
+                    img(src='/images/janet.jpg')
+                  .text
+                    .name
+                      | Janet Corpuz
+                    .t
+                      | Account Manager
+                    .desc
+                      | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Unds nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+              .goto-top
+                a(href='#top')
+                  | Top 
+                  img(src='/images/arrow_up.png')
+      
+    mixin footer()
+     
+    script(type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js')
+    script(type='text/javascript', src='/javascripts/cap.js')
+    script(type='text/javascript', src='/javascripts/lead.js')

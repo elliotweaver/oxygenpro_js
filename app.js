@@ -42,6 +42,11 @@ app.get('/', common.flashInit, routes.index, common.flashFlush);
 app.get('/work', common.flashInit, routes.work, common.flashFlush);
 app.get('/clients', common.flashInit, routes.clients, common.flashFlush);
 app.get('/about',common.flashInit,  routes.about, common.flashFlush);
+app.post('/quote', common.flashInit, routes.quote, common.flashFlush);
+
+/* /blog */
+app.get('/blog',common.flashInit,  routes.blog.index, common.flashFlush);
+app.get('/blog/:slug',common.flashInit,  routes.blog.post, common.flashFlush);
 
 /* /admin */
 app.get ('/admin', common.flashInit, routes.admin.index, common.flashFlush);

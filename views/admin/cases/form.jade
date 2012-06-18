@@ -41,3 +41,6 @@ block content
               mixin textarea('quick', 'Quick Text', session.form.values.quick, session.form.errors.quick, '')
       mixin actions(method)
             
+  script(type='text/javascript')
+    CKEDITOR.replace( 'description' );
+    CKEDITOR.replace( 'quick' );

@@ -3,7 +3,7 @@ $(document).ready(function() {
 	$('.cs').hover(
 	  function() {
 	    $(this).addClass('hover');
-	    $(this).children('.info').animate({ bottom: '0px' }, 500);
+	    $(this).children('.info').animate({ bottom: '0px' }, 250);
 	  },
 	  function() {
 	    $(this).removeClass('hover');

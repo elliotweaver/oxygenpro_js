@@ -8,6 +8,8 @@ html
     link(rel='stylesheet', href='/stylesheets/bootstrap-responsive.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
+  
+  a(name='top')
     
   mixin header('work')
   mixin flash()
@@ -55,7 +57,7 @@ html
                         img(src='/images/#{cs.image}')
                       .info
                         .text
-                          #{cs.quick}
+                          !{cs.quick}
                         
                 .cs-pager
                   .left
@@ -78,6 +80,9 @@ html
       .row
         .span12
           .inside
+            .sep-large
+              .inner
+                img(src='/images/sep_large.png')
             .head-inline
               h2.title-pink
                 | projects
@@ -86,21 +91,24 @@ html
             .projects
               - var i = 0;
               - for project in projects
-                - if (i == 4) { i = 0; } else { i += 1; }
+                - if (i == 3) { i = 1; } else { i += 1; }
                 div(class='project project-#{i}')
                   .image
                     img(src='/images/#{project.image}')
                   .text
-                    .name
-                      | #{project.name}
-                    .description
-                      | #{project.description}
+                    .qtitle
+                      !{project.qtitle}
+                    .quick
+                      !{project.quick}
+            .goto-top
+              a(href='#top')
+                | Top 
+                img(src='/images/arrow_up.png')
     
-    
-    mixin quote()
-    mixin footer()
+  mixin footer()
      
-    script(type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js')
-    script(type='text/javascript', src='/javascripts/cs.js') 
+  script(type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js')
+  script(type='text/javascript', src='/javascripts/cs.js')
+  script(type='text/javascript', src='/javascripts/proj.js')
   
   

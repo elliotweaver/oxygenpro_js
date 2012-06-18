@@ -1,3 +1,5 @@
+include forms
+
 mixin header(type)
   #header
     .container
@@ -46,7 +48,7 @@ mixin header(type)
                   li
                     a(href='/blog') Blog
                 li.last
-                  a(href='#quote') Free Quote
+                  a(href='/#quote') Free Quote
 mixin flash()
   #flash
     .container
@@ -93,36 +95,58 @@ mixin flash()
 mixin quote()
   #quote
     .container
-      .row
+      .row.quote-top
         .span12
           .inside
-            .block.top
-              span.bright
+            .block
+              .text1
                 | Your search is over...
-              span.large
+              .text2
                 | The perfect solution is waiting for you
-      .row.bg-dots
-        .span4.visible-desktop
+              .text3
+                img(src='/images/arrow2.png')
+            .sep-large
+              .inner
+                img(src='/images/sep_large.png')
+      .row.bg-dots.quote-bottom
+        .span4.visible-desktop.proof
           .inside
-            .block.proof
+            .block
               h2.title.bg-pink.t-white
                 | The Proof
               .quotes
-                | {quotes go here}
-        .span8
+                .quote.quote-1.active
+                  .text
+                    | Oxygen Productions has that rare combination of brilliant creativity balanced with understanding of business needs - they consistently overdeliver...
+                  .by
+                    | Tracy Ng - Brand Manager <br>Disney ABC Networks Group
+                .quote.quote-2
+                  .text
+                    | b
+                  .by
+                    | b
+                .quote.quote-3
+                  .text
+                    | c
+                  .by
+                    | c
+                .q-pager
+                  .dot.dot-1.active
+                  .dot.dot-2.inactive
+                  .dot.dot-3.inactive
+        .span7.contact
           .inside
-            .block.quote
+            .block
               h2.title.bg-pink.t-white
                 | Free Quote
-              span
+              span(style='color: #939393;font-size: 16px;font-style: italic;margin-left: 20px;margin-right: 10px;')
                 | Or give us a quick buzz: 
-              span.bold
+              span(style='color: #1F2C35;font-size: 16px;font-style: italic;font-weight: bold;')
                 | Phone: 866.894.6747
               .quoteform
-                form(method='post', action='')
-                  input(name='_method', value='PUT', type='hidden')
-                  input(name='quote[name]', placeholder='Name *')
-                  input(name='quote[company]', placeholder='Company')
+                form(method='post', action='/quote')
+                  mixin method('post')
+                  mixin csrf(token)
                   input(name='quote[url', placeholder='URL')
                   input(name='quote[phone]', placeholder='Phone')
                   input(name='quote[email]', placeholder='Email *')
@@ -139,7 +163,7 @@ mixin quote()
                     option(value='-none-') Project Type
                     option(value='motion') Motion Graphics
                     option(value='video') Video
-                  input(type='submit', value='Save', class='Send it!')
+                  input(type='submit', value='Send it!', class='send')
 
 mixin footer()
   #footer.bg-footer

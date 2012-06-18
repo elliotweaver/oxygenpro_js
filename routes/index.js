@@ -1,6 +1,7 @@
 
 var Projects = require('../models/project.js')
-  , Cases = require('../models/case.js');
+  , Cases = require('../models/case.js')
+  , email = require('mailer');
 
 exports.admin = require('./admin');
 
@@ -22,4 +23,10 @@ exports.clients = function(req, res) {
 
 exports.about = function(req, res) {
   res.render('about', { title: 'About' });
+};
+
+exports.quote = function(req, res) {
+  //validate
+
+  //email
 };

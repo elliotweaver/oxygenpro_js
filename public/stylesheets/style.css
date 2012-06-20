@@ -798,13 +798,22 @@ clear: both;
     margin-left: 20px;
 }
 
+#clients h3 {
+    color: #FFFFFF;
+    font-style: italic;
+}
+#clients p {
+    color: #FFFFFF;
+    font-style: italic;
+}
+
 #capabilities {}
 #capabilities .items {
     overflow: visible;
     width: 570px;
 }
 #capabilities .items .item {
-    background: url("../images/item_grey.jpg") repeat scroll 0 0 transparent;
+    background: url("../images/bars.png") repeat scroll 0 -84px transparent;
     height: 74px;
     width: 267px;
     margin-bottom: 10px;
@@ -813,7 +822,7 @@ clear: both;
     cursor: pointer;
 }
 #capabilities .items .item.hover {
-    background: url("../images/item_dark.jpg") repeat scroll 0 0 transparent;
+    background: url("../images/bars.png") repeat scroll 0 0 transparent;
 }
 #capabilities .items .item .text {
     color: #373F47;

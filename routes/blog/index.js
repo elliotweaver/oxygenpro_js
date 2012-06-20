@@ -22,5 +22,12 @@ exports.index = function(req, res) {
 };
 
 exports.post = function(req, res) {
-  res.render('blog/post', { title: 'Blog Post' });
+  Posts.find({}).where('status', 1).sort('created', -1).where('slug', req.params.slug).exec(function(err, posts) {
+    if (lib.common.e(posts)) {
+      posts = 'none';
+    }
+    Posts.find({}).where('status', 1).where('featured', 1).sort('created', -1).exec(function(err, featured) {
+      res.render('blog/post', { title: 'Blog', posts: posts, featured: featured });
+    });
+  });
 };

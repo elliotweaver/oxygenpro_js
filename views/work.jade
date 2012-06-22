@@ -14,96 +14,100 @@ html
   mixin header('work')
   mixin flash()
     
-  #subheader
-    .container
-      .row
-        .span12
-          .inside
-            .sep
-              img(src='/images/sep_top.png')
-            .title2
-              h1
-                | Work
-            .submenu
-              ul
-                li
-                  a(href='#case-studies')
-                    | Case Studies
-                li.last
-                  a(href='#projects')
-                    | Projects
+  
+  .white-wash
+    #subheader
+      .container
+        .row
+          .span12
+            .inside
+              .sep
+                img(src='/images/sep_top.png')
+              .title2
+                h1
+                  | Work
+              .submenu
+                ul
+                  li
+                    a(href='#case-studies')
+                      | Case Studies
+                  li.last
+                    a(href='#projects')
+                      | Projects
 
   a(name='case-studies')
-  #case-studies
-    .container
-      .row
-        .span12
-          .inside
-            .head-inline
-              h2.title-pink
-                | Case Studies
-              .subtitle
-                | lorem ipsum
-            .cases
-              .wrapper
-                .hider
-                  img(src='/images/hider.png')
-                .inner
-                  - var i = 0;
-                  - for cs in cases
-                    - i++;
-                    div(class='cs cs-#{i}')
-                      .image
-                        img(src='/images/#{cs.image}')
-                      .info
-                        .text
-                          !{cs.quick}
-                        
-                .cs-pager
-                  .left
-                    img(src='/images/arrow_grey_left.png')
-                  .dots
+  .white-wash
+    #case-studies
+      .container
+        .row
+          .span12
+            .inside
+              .head-inline
+                h2.title-pink
+                  | Case Studies
+                .subtitle
+                  | lorem ipsum
+              .cases
+                .wrapper
+                  .hider
+                    img(src='/images/hider.png')
+                  .inner
                     - var i = 0;
                     - for cs in cases
                       - i++;
-                      - if (i == 1)
-                        div(class="active cs-dot cs-dot-#{i}")
-                      - else
-                        div(class="inactive cs-dot cs-dot-#{i}")
-                  .right
-                    img(src='/images/arrow_grey_right.png')
+                      div(class='cs cs-#{i}')
+                        .image
+                          img(src='/images/#{cs.image}')
+                        .info
+                          .text
+                            !{cs.quick}
+                          
+                  .cs-pager
+                    .left
+                      img(src='/images/arrow_grey_left.png')
+                    .dots
+                      - var i = 0;
+                      - for cs in cases
+                        - i++;
+                        - if (i == 1)
+                          div(class="active cs-dot cs-dot-#{i}")
+                        - else
+                          div(class="inactive cs-dot cs-dot-#{i}")
+                    .right
+                      img(src='/images/arrow_grey_right.png')
               
   
   a(name='projects')
-  #projects
-    .container
-      .row
-        .span12
-          .inside
-            .sep-large
-              .inner
-                img(src='/images/sep_large.png')
-            .head-inline
-              h2.title-pink
-                | projects
-              .subtitle
-                | lorem ipsum
-            .projects
-              - var i = 0;
-              - for project in projects
-                - if (i == 3) { i = 1; } else { i += 1; }
-                div(class='project project-#{i}')
-                  .image
-                    img(src='/images/#{project.image}')
-                  .text
-                    .qtitle
-                      !{project.qtitle}
-                    .quick
-                      !{project.quick}
-            .goto-top
-              a(href='#top')
-                | Top 
-                img(src='/images/arrow_up.png')
+  .white-wash
+    #projects
+      .container
+        .row
+          .span12
+            .inside
+              .sep-large
+                .inner
+                  img(src='/images/sep_large.png')
+              .head-inline
+                h2.title-pink
+                  | projects
+                .subtitle
+                  | lorem ipsum
+              .projects
+                - var i = 0;
+                - for project in projects
+                  - if (i == 3) { i = 1; } else { i += 1; }
+                  div(class='project project-#{i}')
+                    .image
+                      img(src='/images/#{project.image}')
+                    .text
+                      .qtitle
+                        !{project.qtitle}
+                      .quick
+                        !{project.quick}
+              .goto-top
+                a(href='#top')
+                  | Top 
+                  img(src='/images/arrow_up.png')
     
   mixin footer()
      

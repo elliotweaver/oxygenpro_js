@@ -14,55 +14,57 @@ html
     mixin header('blog')
     mixin flash()
       
-    #subheader
-      .container
-        .row
-          .span12
-            .inside
-              .sep
-                img(src='/images/sep_top.png')
-              .title2
-                h1
-                  | Blog
+    .white-wash
+      #subheader
+        .container
+          .row
+            .span12
+              .inside
+                .sep
+                  img(src='/images/sep_top.png')
+                .title2
+                  h1
+                    | Blog
                   
     a(name='blog')
-    #blog
-      .container
-        .row
-          .span12
-            .row
-              .span8
-                .inside
-                  .posts
-                    - if (posts == 'none')
-                     | No matching posts
-                    - else
-                      - for post in posts
-                        .post
-                          h2
-                            a(href='/blog/#{post.slug}') !{post.title}
-                          .meta
-                            .date
-                              - var date = new Date(post.created);
-                              - var d = date.getMonth() + '.' + date.getDate() + '.' + date.getFullYear();
-                              | #{d}
-                            .author
-                              | By: #{post.author}
-                          .summary
-                            .text
-                              | !{post.post}
-                          .tags
-                            | Tags: 
-                            - var i = 0;
-                            - for tag in post.tags
-                              - if (i != 0)
-                                | /
-                              - i++;
-                              a(href='#') #{tag}
-                            
-              .span4
-                .inside
-                  mixin blog_side(featured)
+    .white-wash
+      #blog
+        .container
+          .row
+            .span12
+              .row
+                .span8
+                  .inside
+                    .posts
+                      - if (posts == 'none')
+                       | No matching posts
+                      - else
+                        - for post in posts
+                          .post
+                            h2
+                              a(href='/blog/#{post.slug}') !{post.title}
+                            .meta
+                              .date
+                                - var date = new Date(post.created);
+                                - var d = date.getMonth() + '.' + date.getDate() + '.' + date.getFullYear();
+                                | #{d}
+                              .author
+                                | By: #{post.author}
+                            .summary
+                              .text
+                                | !{post.post}
+                            .tags
+                              | Tags: 
+                              - var i = 0;
+                              - for tag in post.tags
+                                - if (i != 0)
+                                  | /
+                                - i++;
+                                a(href='#') #{tag}
+                              
+                .span4
+                  .inside
+                    mixin blog_side(featured)
       
     mixin footer()
        

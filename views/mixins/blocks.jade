@@ -1,7 +1,7 @@
 include forms
 
 mixin header(type)
-  #header
+  #header.white-wash
     .container
       .row
         .span12
@@ -93,79 +93,80 @@ mixin flash()
                     li #{info}
 
 mixin quote(values)
-  #quote
-    .container
-      .row.quote-top
-        .span12
-          .inside
-            .block
-              .text1
-                | Your search is over...
-              .text2
-                | The perfect solution is waiting for you
-              .text3
-                img(src='/images/arrow2.png')
-            .sep-large
-              .inner
-                img(src='/images/sep_large.png')
-      .row.bg-dots.quote-bottom
-        .span4.visible-desktop.proof
-          .inside
-            .block
-              h2.title.bg-pink.t-white
-                | The Proof
-              .quotes
-                .quote.quote-1.active
-                  .text
-                    | Oxygen Productions has that rare combination of brilliant creativity balanced with understanding of business needs - they consistently overdeliver...
-                  .by
-                    | Tracy Ng - Brand Manager <br>Disney ABC Networks Group
-                .quote.quote-2
-                  .text
-                    | b
-                  .by
-                    | b
-                .quote.quote-3
-                  .text
-                    | c
-                  .by
-                    | c
-                .q-pager
-                  .dot.dot-1.active
-                  .dot.dot-2.inactive
-                  .dot.dot-3.inactive
-        .span7.contact
-          .inside
-            .block
-              h2.title.bg-pink.t-white
-                | Free Quote
-              span(style='color: #939393;font-size: 16px;font-style: italic;margin-left: 20px;margin-right: 10px;')
-                | Or give us a quick buzz: 
-              span(style='color: #1F2C35;font-size: 16px;font-style: italic;font-weight: bold;')
-                | Phone: 866.894.6747
-              .quoteform
-                form(method='post', action='/quote')
-                  mixin method('post')
-                  mixin csrf(token)
-                  input(name='quote[name]', placeholder='Name*', value= ('undefined' == values.name) ? '' : values.name)
-                  input(name='quote[company]', placeholder='Company', value= ('undefined' == values.company) ? '' : values.company) 
-                  input(name='quote[url]', placeholder='URL', value= ('undefined' == values.url) ? '' : values.url)
-                  input(name='quote[phone]', placeholder='Phone', value= ('undefined' == values.phone) ? '' : values.phone)
-                  input(name='quote[email]', placeholder='Email*', value= ('undefined' == values.email) ? '' : values.email)
-                  input(name='quote[deadline]', placeholder='Deadline', value= ('undefined' == values.deadline) ? '' : values.deadline)
-                  textarea(name='quote[comment]', placeholder='Short Description*', value= ('undefined' == values.comment) ? '' : values.comment)
-                  select(name='quote[budget]')
-                    option(value='-none-') Budget
-                    option(value='8k-10k') 8k-10k
-                    option(value='10k-25k') 10k-25k
-                    option(value='25k-50k') 25k-50k
-                    option(value='50k-100k') 50k-100k
-                    option(value='100k') 100k+
-                  select(name='quote[type]')
-                    option(value='-none-') Project Type
-                    option(value='motion') Motion Graphics
-                    option(value='video') Video
-                  input(type='submit', value='Send it!', class='send')
+  .white-wash
+    #quote
+      .container
+        .row.quote-top
+          .span12
+            .inside
+              .block
+                .text1
+                  | Your search is over...
+                .text2
+                  | The perfect solution is waiting for you
+                .text3
+                  img(src='/images/arrow2.png')
+              .sep-large
+                .inner
+                  img(src='/images/sep_large.png')
+        .row.bg-dots.quote-bottom
+          .span4.visible-desktop.proof
+            .inside
+              .block
+                h2.title.bg-pink.t-white
+                  | The Proof
+                .quotes
+                  .quote.quote-1.active
+                    .text
+                      | Oxygen Productions has that rare combination of brilliant creativity balanced with understanding of business needs - they consistently overdeliver...
+                    .by
+                      | Tracy Ng - Brand Manager <br>Disney ABC Networks Group
+                  .quote.quote-2
+                    .text
+                      | b
+                    .by
+                      | b
+                  .quote.quote-3
+                    .text
+                      | c
+                    .by
+                      | c
+                  .q-pager
+                    .dot.dot-1.active
+                    .dot.dot-2.inactive
+                    .dot.dot-3.inactive
+          .span7.contact
+            .inside
+              .block
+                h2.title.bg-pink.t-white
+                  | Free Quote
+                span(style='color: #939393;font-size: 16px;font-style: italic;margin-left: 20px;margin-right: 10px;')
+                  | Or give us a quick buzz: 
+                span(style='color: #1F2C35;font-size: 16px;font-style: italic;font-weight: bold;')
+                  | Phone: 866.894.6747
+                .quoteform
+                  form(method='post', action='/quote')
+                    mixin method('post')
+                    mixin csrf(token)
+                    input(name='quote[name]', placeholder='Name*', value= ('undefined' == values.name) ? '' : values.name)
+                    input(name='quote[company]', placeholder='Company', value= ('undefined' == values.company) ? '' : values.company) 
+                    input(name='quote[url]', placeholder='URL', value= ('undefined' == values.url) ? '' : values.url)
+                    input(name='quote[phone]', placeholder='Phone', value= ('undefined' == values.phone) ? '' : values.phone)
+                    input(name='quote[email]', placeholder='Email*', value= ('undefined' == values.email) ? '' : values.email)
+                    input(name='quote[deadline]', placeholder='Deadline', value= ('undefined' == values.deadline) ? '' : values.deadline)
+                    textarea(name='quote[comment]', placeholder='Short Description*', value= ('undefined' == values.comment) ? '' : values.comment)
+                    select(name='quote[budget]')
+                      option(value='-none-') Budget
+                      option(value='8k-10k') 8k-10k
+                      option(value='10k-25k') 10k-25k
+                      option(value='25k-50k') 25k-50k
+                      option(value='50k-100k') 50k-100k
+                      option(value='100k') 100k+
+                    select(name='quote[type]')
+                      option(value='-none-') Project Type
+                      option(value='motion') Motion Graphics
+                      option(value='video') Video
+                    input(type='submit', value='Send it!', class='send')
 
 mixin blog_side(featured)
   .sidebar
@@ -198,7 +199,7 @@ mixin footer()
         .span4
           .inside
             .block.screens
-              img(src='/images/screens.png')
+              img(src='/images/screens.jpg')
               span.bright
                 | Optimized For All Screens
               span.light

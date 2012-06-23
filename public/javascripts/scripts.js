@@ -4,6 +4,7 @@ $(document).ready(function() {
 	  var controller = $.scrollorama({ blocks: '.scrollblock' });
 	  $('.scrollblock').css('position', 'relative').css('top', '0');
 	  
+	  /* Top VMware */
 	  controller.animate(
 	      '.tile3',
 	      { 
@@ -24,6 +25,7 @@ $(document).ready(function() {
 	      end:310 
 	    }
 	  );
+	  
 	  /*
 		controller.animate(
 		  '.tile3',

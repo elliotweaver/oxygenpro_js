@@ -1171,7 +1171,7 @@ background: none repeat scroll 0 0 transparent;
 
 
      
-/* Landscape phone to portrait tablet */
+/* Landscape phone to portrait tablet 
 @media (max-width: 320px) { 
 
   #header .logo {
@@ -1233,7 +1233,7 @@ background: none repeat scroll 0 0 transparent;
 
 }
 
-/* 440 */
+/* 440 
 @media (min-width: 481px) and (max-width: 768px) {
 
   body {
@@ -1326,7 +1326,7 @@ background: none repeat scroll 0 0 transparent;
 
 }
      
-/* Portrait tablet to landscape and desktop 724 */
+/* Portrait tablet to landscape and desktop 724 
 @media (min-width: 769px) and (max-width: 980px) {
 
   #capabilities .bottom .inside {
@@ -1365,11 +1365,11 @@ background: none repeat scroll 0 0 transparent;
 
 }
      
-/* Large desktop 940 */
+/* Large desktop 940 
 @media (min-width: 981px) {
   
 
   
 }
-
+*/
 

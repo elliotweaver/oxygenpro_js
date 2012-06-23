@@ -18,6 +18,9 @@ h3 {
 .white-wash {
 	  background-color: #FFFFFF;
 }
+.hero-wrapper {
+	overflow: hidden;
+}
 
 
 /* Temp 
@@ -278,6 +281,14 @@ h3 {
     background-position: -1210px -85px;
 }
 
+#cboxContent {
+	
+}
+#cboxContent iframe {
+	width: 550px;
+	height: 350px;
+}
+
 
 .client-milton {
     background-position: 0 -180px;
@@ -450,7 +461,7 @@ h3 {
 
 /* About */
 #about {
-    padding: 50px 20px;
+    padding: 40px 20px;
     position: relative;
     z-index: 2;
 }
@@ -857,6 +868,13 @@ clear: both;
     float: left;
     cursor: pointer;
 }
+.contact .a2 {
+    color: #939393;font-size: 16px;font-style: italic;margin-left: 20px;margin-right: 10px;
+  }
+  
+  .contact .a3 {
+    color: #1F2C35;font-size: 16px;font-style: italic;font-weight: bold;
+  }
 #capabilities .items .item.hover {
     background: url("../images/bars.png") repeat scroll 0 0 transparent;
 }
@@ -1240,6 +1258,61 @@ background: none repeat scroll 0 0 transparent;
   #capabilities .ability img {
     width: 350px;
   }
+  
+  #capabilities .ability {
+    margin: 0 auto 30px;
+    text-align: center;
+    width: 290px;
+	}
+	#capabilities {
+	    padding: 50px 20px;
+	}
+	
+	.clients-stand {
+	  margin-top: 20px;
+	}
+	
+	#clients {
+    padding: 50px 20px;
+  }
+  
+  .s-left {
+    background: none repeat scroll 0 0 transparent;
+    border-bottom: 1px dotted;
+    margin-bottom: 30px;
+    padding-right: 20px;
+    position: relative;
+    width: auto;
+  }
+  
+  .s-right {
+    margin-left: 0;
+  }
+  
+  .contact {
+    float: none;
+    margin: 0 auto;
+    width: 600px;
+  }
+  
+  .copyright {
+    width: 620px;
+  }
+  
+  .quote-stand img {
+    margin-bottom: 30px;
+  }
+  
+  .contact {
+    float: none;
+    margin: 0 auto;
+  }
+  
+  .contact span {
+    clear: both;
+  }
+  
+  
 
 }
      
@@ -1248,6 +1321,36 @@ background: none repeat scroll 0 0 transparent;
 
   #capabilities .bottom .inside {
     margin: 20px 0;
+  }
+  
+  #hero-stand img {
+    max-width: 110%;
+  }
+  
+  .clients-stand img {}
+  
+  .contact {
+    float: none;
+    margin: 0 auto;
+    width: 600px;
+  }
+  
+  .contact .a2 {}
+  .contact .a3 {}
+  
+  .copyright {
+    width: 620px;
+  }
+  
+  .quote-stand img {
+    margin-bottom: 30px;
+  }
+  
+  .s-left {
+    width: 290px;
+  }
+  .s-right {
+    margin-left: 25px;
   }
 
 }

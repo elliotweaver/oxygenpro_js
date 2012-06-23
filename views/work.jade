@@ -7,6 +7,11 @@ html
     link(rel='stylesheet', href='/stylesheets/bootstrap.css')
     link(rel='stylesheet', href='/stylesheets/bootstrap-responsive.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
+    script(type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js')
+    script(type='text/javascript', src='/javascripts/jquery.colorbox-min.js')
+    script(type='text/javascript', src='/javascripts/cs.js')
+    script(type='text/javascript', src='/javascripts/proj.js')
+    
   body
   
   a(name='top')
@@ -98,7 +103,8 @@ html
                   - if (i == 3) { i = 1; } else { i += 1; }
                   div(class='project project-#{i}')
                     .image
-                      img(src='/images/#{project.image}')
+                      a(href='http://player.vimeo.com/video/24214057?autoplay=1&width=800px')
+                        img(src='/images/#{project.image}')
                     .text
                       .qtitle
                         !{project.qtitle}
@@ -110,9 +116,5 @@ html
                   img(src='/images/arrow_up.png')
     
   mixin footer()
-     
-  script(type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js')
-  script(type='text/javascript', src='/javascripts/cs.js')
-  script(type='text/javascript', src='/javascripts/proj.js')
   
   

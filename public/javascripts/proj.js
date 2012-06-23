@@ -20,5 +20,7 @@ $(document).ready(function() {
 	  }
 	);
 	
+	$(".project a").colorbox({iframe:true, innerWidth:600, innerHeight:400});
+	
 	
 });

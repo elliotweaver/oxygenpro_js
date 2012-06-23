@@ -8,20 +8,20 @@ $(document).ready(function() {
 	      '.tile3',
 	      { 
 	        delay: 0, 
-	        duration: 600, 
+	        duration: 800, 
 	        property:'top', 
 	        start:74, 
-	        end:-20
+	        end:280
 	      }
 	    );
 	  controller.animate(
-	    '.tile2',
+	    '.tile1',
 	    { 
 	      delay: 0, 
-	      duration: 600, 
+	      duration: 800, 
 	      property:'top', 
-	      start:-9, 
-	      end:-500 
+	      start:1, 
+	      end:310 
 	    }
 	  );
 	  /*

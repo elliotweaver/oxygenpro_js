@@ -93,14 +93,16 @@ mixin quote(values)
         .row.quote-top
           .span12
             .inside
-              .block
+              .block.quote-stand.hidden-desktop
+                img(src='/images/s-perfect.png')
+              .block.visible-desktop
                 .text1
                   | Your search is over...
                 .text2
                   | The perfect solution is waiting for you
                 .text3
                   img(src='/images/arrow2.png')
-              .sep-large
+              .sep-large.visible-desktop
                 .inner
                   img(src='/images/sep_large.png')
         .row.bg-dots.quote-bottom
@@ -134,9 +136,9 @@ mixin quote(values)
               .block
                 h2.title.bg-pink.t-white
                   | Free Quote
-                span(style='color: #939393;font-size: 16px;font-style: italic;margin-left: 20px;margin-right: 10px;')
+                span(class='a2')
                   | Or give us a quick buzz: 
-                span(style='color: #1F2C35;font-size: 16px;font-style: italic;font-weight: bold;')
+                span(class='a3')
                   | Phone: 866.894.6747
                 .quoteform
                   form(method='post', action='/quote')
@@ -190,7 +192,7 @@ mixin footer()
   #footer.bg-footer
     .container
       .row
-        .span4
+        .span4.visible-desktop
           .inside
             .block.screens
               img(src='/images/screens.jpg')

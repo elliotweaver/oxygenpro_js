@@ -17,8 +17,15 @@ html
     h1.throw
       | Oxygen Productions, Inc.
     
-    .white-wash
+    .white-wash.hero-wrapper
     
+      #hero-stand.hidden-desktop
+        .container
+          .row
+            .span12
+              .inside
+                  img(src='/images/c-vmware.jpg')
+      
       #hero.visible-desktop
         .container
           .row.hero-inside
@@ -117,7 +124,9 @@ html
                   | Oxygen Prvbines years of experience, results centric design and cutting edge technology to deliver the most effective web solutions.
           .span8
             .inside
-              .block
+              .block.clients-stand.hidden-desktop
+                img(src='/images/s-clients.png')
+              .block.visible-desktop
                   span.client-logo.client-disney
                   span.client-logo.client-vmware
                   span.client-logo.client-abc

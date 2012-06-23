@@ -10,6 +10,7 @@ $(document).ready(function() {
     	  $(this).children('.text').removeClass('hover').animate({ right: '0px', opacity: 0 }, 10);
       }
 	);
+
 	
 	$('.project-3').hover(
       function() {
@@ -20,7 +21,7 @@ $(document).ready(function() {
 	  }
 	);
 	
-	$(".project a").colorbox({iframe:true, innerWidth:900, innerHeight:600});
+	$(".project a.cb").colorbox({iframe:true, innerWidth:900, innerHeight:600});
 	
 	
 });

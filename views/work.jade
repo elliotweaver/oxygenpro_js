@@ -103,8 +103,15 @@ html
                   - if (i == 3) { i = 1; } else { i += 1; }
                   div(class='project project-#{i}')
                     .image
-                      a(href='http://player.vimeo.com/video/24214057?autoplay=1&width=800px')
-                        img(src='/images/#{project.image}')
+                      - var link = '';
+                      - if (project.video !== '')
+                        - link = project.video+'?autoplay=1';
+                        a(href='#{link}', class='cb')
+                          img(src='/images/#{project.image}')
+                      - else
+                        - link = project.link;
+                        a(href='#{link}', target='_blank')
+                          img(src='/images/#{project.image}')
                     .text
                       .qtitle
                         !{project.qtitle}

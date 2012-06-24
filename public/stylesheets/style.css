@@ -732,7 +732,7 @@ h3 {
     background: url("../images/quote.png") no-repeat scroll 0 0 transparent;
     margin-top: 20px;
     min-height: 188px;
-    min-width: 308px;
+    width: 307px;
     position: relative;
 }
 .quotes .quote {

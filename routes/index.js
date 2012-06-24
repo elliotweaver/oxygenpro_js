@@ -9,6 +9,16 @@ var Projects = require('../models/project.js')
 exports.admin = require('./admin');
 exports.blog = require('./blog');
 
+exports.login = function(req, res, next) {
+  if (req.loggedIn === true) {
+    res.redirect('/admin');
+  }
+  else {
+    res.render('login', { title: 'Oxygen Productions' });
+    next();
+  }
+};
+
 exports.index = function(req, res, next) {
   res.render('index', { title: 'Oxygen Productions' });
   next();

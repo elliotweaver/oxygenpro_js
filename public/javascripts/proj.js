@@ -4,20 +4,20 @@ $(document).ready(function() {
 	
 	$('.project-1, .project-2').hover(
       function() {
-    	  $(this).children('.text').addClass('hover').animate({ right: '-322px', opacity: 1 }, dur);
+    	  $(this).children('.text').addClass('hover').animate({ opacity: 1 }, dur);
       },
       function() {
-    	  $(this).children('.text').removeClass('hover').animate({ right: '0px', opacity: 0 }, 10);
+    	  $(this).children('.text').removeClass('hover').animate({ opacity: 0 }, 1);
       }
 	);
 
 	
 	$('.project-3').hover(
       function() {
-		$(this).children('.text').addClass('hover').animate({ right: '322px', opacity: 1 }, dur);
+		$(this).children('.text').addClass('hover').animate({ opacity: 1 }, dur);
 	  },
 	  function() {
-	    $(this).children('.text').removeClass('hover').animate({ right: '0px', opacity: 0 }, 10);
+	    $(this).children('.text').removeClass('hover').animate({ opacity: 0 }, 1);
 	  }
 	);
 	

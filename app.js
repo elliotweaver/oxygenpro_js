@@ -22,7 +22,7 @@ app.configure(function(){
   app.use(express.logger('dev'));
   app.use(express.bodyParser({ keepExtensions: true }));
   app.use(express.methodOverride());
-  app.use(express.cookieParser('zSaOy~CQ2HQ-UZY)fa|m|ywBZ%vwr7w8jS*A'));
+  app.use(express.cookieParser('omg'));
   app.use(express.session());
   app.use(express.csrf());
   app.use(everyauth.middleware());

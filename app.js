@@ -24,8 +24,8 @@ app.configure(function(){
   app.use(express.methodOverride());
   app.use(express.cookieParser('zSaOy~CQ2HQ-UZY)fa|m|ywBZ%vwr7w8jS*A'));
   app.use(express.session());
-  app.use(everyauth.middleware());
   app.use(express.csrf());
+  app.use(everyauth.middleware());
   app.use(app.router);
   app.use(express.static(__dirname + '/public'));
   app.locals.use(function(req, res) {

@@ -58,8 +58,8 @@ app.get('/blog',common.flashInit,  routes.blog.index, common.flashFlush);
 app.get('/blog/:slug',common.flashInit,  routes.blog.post, common.flashFlush);
 
 /* /login */
-app.get ('/login', common.flashInit, routes.login, common.flashFlush);
-app.post ('/login', common.flashInit, routes.loginPost, common.flashFlush);
+app.get ('/login', routes.login);
+app.post ('/login', routes.loginPost);
 
 /* /admin */
 app.get ('/admin', common.flashInit, routes.admin.index, common.flashFlush);

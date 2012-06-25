@@ -44,7 +44,7 @@ mixin header(type)
                 li.last
                   a(href='/#quote') Free Quote
 mixin flash()
-  #flash
+  #flash.white-wash
     .container
       .row
         .span12
@@ -119,14 +119,14 @@ mixin quote(values)
                       | Tracy Ng - Brand Manager <br>Disney ABC Networks Group
                   .quote.quote-2
                     .text
-                      | b
+                      | VMware's professional engagement with Oxygen has been fantastic! They've produced many excellent projects for our product and solution videos, which have had a huge impact to our business.
                     .by
-                      | b
+                      | John Forrester <br>Director of Web Marketing
                   .quote.quote-3
                     .text
-                      | c
+                      | We chose to partner with Oxygen because if their impressive portfolio and creative expertise. We continue to work with them because of their commitment to excellence and quality.
                     .by
-                      | c
+                      | Michael Higashi <br> ElectrifyMedia Productions
                   .q-pager
                     .dot.dot-1.active
                     .dot.dot-2.inactive
@@ -192,15 +192,15 @@ mixin footer()
   #footer.bg-footer
     .container
       .row
-        .span4.visible-desktop
-          .inside
-            .block.screens
-              img(src='/images/screens.jpg')
-              span.bright
-                | Optimized For All Screens
-              span.light
-                | Resize your browser. It fits.
-        .span8
+        // .span4.visible-desktop
+        //  .inside
+        //    .block.screens
+        //      img(src='/images/screens.jpg')
+        //      span.bright
+        //        | Optimized For All Screens
+        //      span.light
+        //        | Resize your browser. It fits.
+        .span12
           .inside
             .block.copyright
               img(src='/images/logo_dark.png')

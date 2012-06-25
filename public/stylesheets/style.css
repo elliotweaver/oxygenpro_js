@@ -416,7 +416,7 @@ h3 {
     padding: 20px;
 }
 #header .logo {
-    margin: 10px;
+    margin: 10px 10px 10px 0;
     float: left;
 }
 #header .info {
@@ -545,7 +545,7 @@ h3 {
 }
 .slide-vmware .tile2 {
     max-width: 1073px;
-    right: -127px;
+    right: -130px;
     top: -9px;
 }
 .slide-vmware .tile3 {
@@ -745,7 +745,7 @@ h3 {
 .quotes .quote .text {
     color: #FFFFFF;
     font-family: tahoma;
-    font-size: 16px;
+    font-size: 13px;
     height: 120px;
     line-height: 23px;
     padding: 20px;
@@ -789,18 +789,7 @@ h3 {
     height: 100px;
 }
 .quoteform .send {
-    background-image: linear-gradient(bottom, rgb(54,64,72) 5%, rgb(73,88,98) 53%);
-    background-image: -o-linear-gradient(bottom, rgb(54,64,72) 5%, rgb(73,88,98) 53%);
-    background-image: -moz-linear-gradient(bottom, rgb(54,64,72) 5%, rgb(73,88,98) 53%);
-    background-image: -webkit-linear-gradient(bottom, rgb(54,64,72) 5%, rgb(73,88,98) 53%);
-    background-image: -ms-linear-gradient(bottom, rgb(54,64,72) 5%, rgb(73,88,98) 53%);
-    background-image: -webkit-gradient(
-      linear,
-      left bottom,
-      left top,
-      color-stop(0.05, rgb(54,64,72)),
-      color-stop(0.53, rgb(73,88,98))
-    );
+    background: url("../images/send_btns.png") repeat scroll 0 0 transparent;
     border: 1px solid #3C4850;
     box-shadow: 0 1px 1px #6D8393 inset;
     -webkit-box-shadow: 0 1px 1px #6D8393 inset;
@@ -813,6 +802,12 @@ h3 {
     -webkit-text-shadow: 1px 1px #666666;
     -moz-text-shadow: 1px 1px #666666;
     width: auto;
+}
+.quoteform .send:hover {
+	background: url("../images/send_btns.png") repeat scroll 0 -33px transparent;
+}
+.quoteform .send:active {
+	background: url("../images/send_btns.png") repeat scroll 0 -67px transparent;
 }
 
 input, textarea, select, *:-moz-placeholder {
@@ -1142,11 +1137,10 @@ background: none repeat scroll 0 0 transparent;
 }
 
 .copyright .copy {
-	  color: #47494B;
-    float: right;
-    font-size: 13px;
+    color: #47494B;
+    font-size: 11px;
+    margin-top: 6px;
     text-shadow: 1px 0 1px #000000;
-    width: 560px;
 }
 
 .screens {

@@ -551,17 +551,17 @@ h3 {
     top: 0;
 }
 .slide-vmware .tile1 {
-    max-width: 1202px;
+    max-width: 1123px;
     right: -160px;
     top: 1px;
 }
 .slide-vmware .tile2 {
-    max-width: 1073px;
-    right: -130px;
-    top: -9px;
+    max-width: 970px;
+    right: -35px;
+    top: 51px;
 }
 .slide-vmware .tile3 {
-    max-width: 554px;
+    max-width: 548px;
     right: 0;
     top: 74px;
 }
@@ -1104,7 +1104,7 @@ clear: both;
     background: url("../images/square_grey.jpg") repeat scroll 0 0 transparent;
 }
 #leadership .items .item .text {
-    background: url("../images/square_pink.png") repeat scroll 0 0 transparent;
+    background: url("../images/square_pink.gif") repeat scroll 0 0 transparent;
     height: 216px;
     left: 225px;
     position: absolute;
@@ -1114,7 +1114,7 @@ clear: both;
     opacity: 0;
 }
 #leadership .items .item-right .text {
-	  background: url("../images/square_pink_r.png") repeat scroll 0 0 transparent;
+	  background: url("../images/square_pink_r.gif") repeat scroll 0 0 transparent;
 	  left: -225px;
 }
 #leadership .items .item .text .name {

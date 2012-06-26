@@ -108,10 +108,14 @@ h3 {
     background-color: #181a1c;
 }
 
+#quote .goto-top {
+	margin: 0 60px 50px;
+}
+
 /* Background Images */
 .bg-dots {
     height: 320px;
-    padding: 0 0 79px;
+    padding: 0;
 }
 .bg-gradient-grey {
     background: url('/images/bg-gradient-grey.png') repeat-x scroll center top #474e56;

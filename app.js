@@ -18,20 +18,21 @@ app.configure(function(){
   app.set('port', process.env.PORT || 4000);
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
-  app.use(express.favicon());
+  //app.use(express.favicon());
   app.use(express.logger('dev'));
   app.use(express.bodyParser({ keepExtensions: true }));
-  app.use(express.methodOverride());
-  app.use(express.cookieParser('omg'));
-  app.use(express.session());
-  app.use(express.csrf());
-  app.use(everyauth.middleware());
-  app.use(app.router);
-  app.use(express.static(__dirname + '/public'));
   app.locals.use(function(req, res) {
     res.locals.sess = req.session;
     res.locals.token = req.session._csrf;
   });
+  app.use(express.static(__dirname + '/public'));
+  app.use(express.methodOverride());
+  app.use(express.cookieParser('zSaOy~CQ2HQ-UZY)fa|m|ywBZ%vwr7w8jS*A'));
+  app.use(express.session());
+  app.use(everyauth.middleware());
+  app.use(express.csrf());
+  app.use(app.router);
+  
 });
 
 var isAdmin = function(req, res, next) {

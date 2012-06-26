@@ -719,11 +719,12 @@ h3 {
     font-size: 36px;
     font-style: italic;
     font-weight: bold;
-    left: 100px;
+    left: 130px;
     position: relative;
+    width: 660px;
 }
 .quote-top .text3 {
-    left: 760px;
+    left: 800px;
     position: absolute;
     top: 45px;
 }

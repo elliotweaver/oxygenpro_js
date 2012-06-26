@@ -934,6 +934,54 @@ clear: both;
 #process {
     padding-bottom: 50px;
 }
+#process .image {
+	position: relative;
+}
+#process .image .text {
+	position: absolute;
+    top: 210px;
+    width: 100%;
+}
+#process .image .text table {
+	width: 98%;
+}
+#process .image .text table tr {}
+#process .image .text table tr td {
+	display: block;
+    float: left;
+    padding: 0 10px;
+    vertical-align: top;
+    width: 124px;
+}
+#process .image .text table tr td h3 {
+	color: #2D3033;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+#process .image .text table tr td p {
+	color: #5A5A5A;
+    font-size: 11px;
+}
+#process .image .text .item-1 {
+	padding-left: 0;
+    width: 134px;
+}
+#process .image .text .item-2 {
+	width: 133px;
+}
+#process .image .text .item-3 {
+	width: 134px;
+}
+#process .image .text .item-4 {
+	width: 130px;
+}
+#process .image .text .item-5 {
+	width: 136px;
+}
+#process .image .text .item-6 {
+	padding-right: 0;
+    width: 134px;
+}
 
 #blog {
     padding-top: 50px;

@@ -37,16 +37,14 @@ app.configure(function(){
 
 var isAdmin = function(req, res, next) {
   
-  next(); //tmp while fixing login on server
+  //next(); //tmp while fixing login on server
   
-  /*
   if (req.loggedIn === true) {
     next();
   }
   else {
     res.redirect('/login');
   }
-  */
 }
 
 app.configure('development', function(){

@@ -1189,6 +1189,7 @@ background: none repeat scroll 0 0 transparent;
 #subheader .submenu ul li a {
 	  color: #000000;
     font-size: 13px;
+    text-decoration: underline;
 }
 #subheader .submenu ul li a:hover {}
 

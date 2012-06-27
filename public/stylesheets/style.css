@@ -420,7 +420,7 @@ h3 {
     padding: 20px;
 }
 #header .logo {
-    margin: 10px 10px 10px 0;
+    margin: 33px 10px 10px 0;
     float: left;
 }
 #header .info {
@@ -453,7 +453,7 @@ h3 {
 #header .menu ul li a {
     color: #484848;
     display: block;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: bold;
     padding: 10px 15px;
 }
@@ -595,7 +595,7 @@ h3 {
 }
 
 #case-studies {
-    padding: 70px 0;
+
 }
 #case-studies .hider {
     position: absolute;
@@ -665,7 +665,7 @@ h3 {
 }
 
 .sep-large {
-    margin-top: 30px;
+    /* margin-top: 30px; */
     overflow: hidden;
 }
 .sep-large .inner {
@@ -673,7 +673,13 @@ h3 {
 }
 
 #projects {
-    padding: 0 0 60px 0;
+}
+.region-top {
+    padding: 90px 20px;
+}
+.region {
+    background: url("../images/sep_large.png") no-repeat scroll 0 0 transparent;
+    padding: 90px 20px;
 }
 #projects .project {
     float: left;
@@ -932,7 +938,6 @@ clear: both;
 }
 
 #process {
-    padding-bottom: 50px;
 }
 #process .image {
 	position: relative;
@@ -984,7 +989,7 @@ clear: both;
 }
 
 #blog {
-    padding-top: 50px;
+
 }
 #blog .posts {}
 #blog .posts .post {
@@ -1088,7 +1093,7 @@ clear: both;
 }
 
 #leadership {
-    padding-bottom: 50px;
+
 }
 #leadership .items .item {
     float: left;
@@ -1133,7 +1138,8 @@ clear: both;
 }
 
 #subheader {
-    padding-bottom: 20px;
+    background: url("../images/sep_top.png") no-repeat scroll center bottom transparent;
+    padding-bottom: 0;
 }
 #subheader .inside {
     overflow: hidden;
@@ -1180,7 +1186,10 @@ background: none repeat scroll 0 0 transparent;
     margin-right: 0;
     padding-right: 0;
 }
-#subheader .submenu ul li a {}
+#subheader .submenu ul li a {
+	  color: #000000;
+    font-size: 13px;
+}
 #subheader .submenu ul li a:hover {}
 
 .copyright img {

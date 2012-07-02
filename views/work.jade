@@ -103,16 +103,16 @@ html
                       - if (project.video !== '')
                         - link = project.video+'?autoplay=1';
                         a(href='#{link}', class='cb')
-                          img(src='/images/#{project.image}')
+                          img(src='/images/#{project.image}', alt='#{project.title}', title='#{project.title}')
                       - else
                         - link = project.link;
                         a(href='#{link}', target='_blank')
-                          img(src='/images/#{project.image}')
+                          img(src='/images/#{project.image}', alt='#{project.title}', title='#{project.title}')
                     .text
                       .qtitle
-                        !{project.qtitle}
+                        !{project.title}
                       .quick
-                        !{project.quick}
+                        !{project.description}
               .goto-top
                 a(href='#top')
                   | Top 

@@ -8,6 +8,11 @@ a {
 ul li {
     list-style-type: none;
 }
+.help-block {
+	display: inline-block;
+    font-size: 13px;
+    margin-left: 20px;
+}
 .manage {
     padding: 10px 0;
 }

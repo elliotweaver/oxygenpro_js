@@ -17,42 +17,31 @@ block content
       table.table.table-bordered.table-striped
         mixin thead( [ 'Project' ] )
         tbody
-          - if (method == 'put')
-            tr
-              td
-                mixin disabled('id', 'ID', sess.form.values.id, sess.form.errors.id, '')
           tr
             td
-              mixin input('text', 'name', 'Name', sess.form.values.name, sess.form.errors.name, '', true)
+              mixin input('text', 'name', 'Name', sess.form.values.name, sess.form.errors.name, '(Internal use only)', true)
           tr
             td
-              mixin input('text', 'title', 'Title', sess.form.values.title, sess.form.errors.title, '', true)  
+              mixin input('text', 'title', 'Project Title', sess.form.values.title, sess.form.errors.title, 'This shows up in the rollover, alt tag, lightbox', true)
+          tr
+            td
+              mixin input('text', 'categories', 'Categories', sess.form.values.categories, sess.form.errors.categories, 'Seperate categories by a comma and a space (ex. video, web, motion)')  
+          tr
+            td
+              mixin file('image', 'Thumbnail Image', sess.form.values.image, sess.form.errors.image, '')
+          tr
+            td
+              mixin input('text', 'video', 'Video Link', sess.form.values.video, sess.form.errors.video, 'Vimeo Address')
+          tr
+            td
+              mixin input('text', 'link', 'Website Link', sess.form.values.link, sess.form.errors.link, '')
+          tr
+            td
+              mixin file('photo', 'Still Image', sess.form.values.photo, sess.form.errors.photo, 'If project is a single photo or graphic use this')
           tr
             td
               mixin textarea('description', 'Description', sess.form.values.description, sess.form.errors.description, '')
-          tr
-            td
-              mixin input('text', 'categories', 'Categories', sess.form.values.categories, sess.form.errors.categories, '')
-          tr
-            td
-              mixin file('image', 'Image', sess.form.values.image, sess.form.errors.image, '')
-          tr
-            td
-              mixin input('text', 'video', 'Video', sess.form.values.video, sess.form.errors.video, '')
-          tr
-            td
-              mixin input('text', 'link', 'Link', sess.form.values.link, sess.form.errors.link, '')
-          tr
-            td
-              mixin file('photo', 'Photo', sess.form.values.photo, sess.form.errors.photo, '')
-          tr
-            td
-              mixin input('text', 'qtitle', 'Quick Title', sess.form.values.qtitle, sess.form.errors.qtitle, '', true)  
-          tr
-            td
-              mixin textarea('quick', 'Quick Text', sess.form.values.quick, sess.form.errors.quick, '')
       mixin actions(method)
             
   script(type='text/javascript')
     CKEDITOR.replace( 'description' );
-    CKEDITOR.replace( 'quick' );

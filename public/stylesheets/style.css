@@ -723,6 +723,9 @@ h3 {
 #projects .project-3 {
     margin-right: 0;
 }
+#projects .project-1 {
+    clear: left;
+}
 
 .quote-top {}
 .quote-top .text1 {

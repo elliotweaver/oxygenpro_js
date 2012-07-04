@@ -33,6 +33,11 @@ exports.work = function(req, res, next) {
   next();
 };
 
+exports.workvmware = function(req, res, next) {
+  res.render('workvmware', { title: 'Work' });
+  next();
+};
+
 exports.clients = function(req, res, next) {
   res.render('clients', { title: 'Clients' });
   next();

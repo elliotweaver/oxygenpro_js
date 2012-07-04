@@ -1231,7 +1231,46 @@ background: none repeat scroll 0 0 transparent;
     text-shadow: 1px 0 1px #000000;
 }
 
-
+#work-vmware {}
+#work-vmware .inside {
+	  background-attachment: scroll;
+    background-clip: border-box;
+    background-color: transparent;
+    background-image: url("../images/vmware_csh.jpg");
+    background-origin: padding-box;
+    background-repeat: no-repeat;
+    min-height: 2131px;
+    padding-top: 160px;
+    width: 980px;
+}
+#work-vmware .inside h1 {
+	  color: #3C4248;
+    font-family: arial;
+    font-size: 28px;
+}
+#work-vmware .inside .text {
+	  border-bottom: 1px solid #B9BDBE;
+    border-top: 1px solid #B9BDBE;
+    color: #7E848B;
+    font-family: verdana;
+    font-size: 12px;
+    margin-bottom: 10px;
+    margin-right: 520px;
+    margin-top: 10px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+#work-vmware .inside h2 {
+	  color: #474B50;
+    font-family: verdana;
+    font-size: 13px;
+}
+#work-vmware .inside .checkout p {
+	  color: #279CD9;
+    font-family: verdana;
+    font-size: 16px;
+    margin-top: 20px;
+}
 
 
 

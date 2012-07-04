@@ -1,0 +1,78 @@
+include mixins/blocks
+
+!!! html
+html
+  head
+    title= title
+    link(type="image/x-icon", href="/images/favicon.ico", rel="shortcut icon")
+    link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+    // link(rel='stylesheet', href='/stylesheets/bootstrap-responsive.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js')
+    script(type='text/javascript', src='/javascripts/jquery.colorbox-min.js')
+    script(type='text/javascript', src='/javascripts/cs.js')
+    script(type='text/javascript', src='/javascripts/proj.js')
+    
+  body
+  
+  a(name='top')
+    
+  mixin header('work')
+  mixin flash()
+    
+  
+  .white-wash
+    #subheader
+      .container
+        .row
+          .span12
+            .inside
+              .title2
+                h1
+                  | Work
+              .submenu
+                ul
+                  li
+                    a(href='/work#case-studies')
+                      | Case Studies
+                  li.last
+                    a(href='/work#projects')
+                      | Projects
+
+  a(name='work-vmware')
+  .white-wash
+    #work-vmware.region-top
+      .container
+        .row
+          .span12
+            .inside
+              h1
+                | A Long Journey
+              .text
+                h2
+                  |In 2004, VMware had just outgrown its start-up phase
+                
+                p
+                  | Setting themselves apart as the leader in virtualization technology, VMware had grown to over 1,000 employees, was seeing widespread acceptance with Fortune 500 companies, and its executives knew they were ready to take their solutions to the masses. They began searching for a partner to tell the world what they had done, and so their relationship with Oxygen Productions was formed.
+                
+                p
+                  | Having already secured VMware technology in all 500 of the Fortune 500 companies, the company began launching tools targeted toward the desktop PC and Mac user, and looking for ways to shift the focus of customer conversations from product descriptions to integrated solutions. The initial challenges were to demonstrate the power of the VMware platform to IT managers and CTO’s industry wide, so Oxygen began defining a method of delivery that not only demystified their solution, but made it seem tangible to everyone. With the creation of targeted videos, we highlighted product after product, and demonstrated them in real scenarios to show cost and efficiency savings that VMware’s platform affords. We worked closely with VMware to define the solutions offerings and began delivering sets of motion graphics presentations that told the story, and sold their technology.
+
+                h2
+                  | Now, years later
+
+                p
+                  | The work we completed with the company continues to be enmeshed in VMware’s overarching marketing strategy. From video testimonials, Flash presentations, motion graphics videos, brand positioning strategies, site development and extensions, the partnership that we share with VMware has helped them to grow to more than 10k employees worldwide, with a market capitalization of over 40 billion dollars. We're proud of our continued partnership as VMware carries its vision in to the future.
+              
+              .checkout
+                p
+                  | Check out the timeline of highlights >
+               
+            .goto-top
+              a(href='#top')
+                | Top 
+                img(src='/images/arrow_up.png')
+    
+  mixin footer()
+  
+  

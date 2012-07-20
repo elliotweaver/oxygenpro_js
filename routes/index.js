@@ -81,7 +81,6 @@ exports.quote = function(req, res, next) {
   values.url = sanitize(values.url).xss().trim();
   values.phone = sanitize(values.phone).xss().trim();
   values.deadline = sanitize(values.deadline).xss().trim();
-  values.type = sanitize(values.type).xss().trim();
   values.budget = sanitize(values.budget).xss().trim();
   
   if (!pass) {
@@ -100,7 +99,6 @@ exports.quote = function(req, res, next) {
         "<strong>Phone:</strong> " + values.phone + "<br>" +
         "<strong>Budget:</strong> " + values.budget + "<br>" +
         "<strong>Deadline:</strong> " + values.deadline + "<br>" +
-        "<strong>Type:</strong> " + values.type + "<br><br><br>" +
         "<strong>Description:</strong> " + values.comment + "<br>" +
         "</p>";
     

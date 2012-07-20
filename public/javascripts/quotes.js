@@ -2,6 +2,21 @@ $(document).ready(function() {
 	var timer;
 	clearTimeout(timer);
 	timer = setInterval(eval("qPager"),"7000");
+	$(".q-pager .dot").click(function() {
+	  var num;
+	  $($(this).attr('class').split(' ')).each(function(){
+	    if (this !== '' && this != 'active' && this != 'inactive' && this != 'dot') {
+	      var arr = this.split('-');
+        num = arr[1];
+	    }
+	  });
+	  $('.q-pager .dot').removeClass('active').addClass('inactive');
+	  $('.q-pager .dot-'+num).removeClass('inactive').addClass('active');
+	  $('.quote').removeClass('active').addClass('inactive');
+	  $('.quote-'+num).removeClass('inactive').addClass('active');
+	  //$('.quote-'+current).animate({ opactiy : '0' }, dur);
+	  //$('.quote-'+next).animate({ opactiy : '0' }, dur);
+	});
 });
 
 var qPager = function() {

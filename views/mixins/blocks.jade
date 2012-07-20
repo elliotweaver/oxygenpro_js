@@ -144,21 +144,31 @@ mixin quote(values)
                   form(method='post', action='/quote')
                     mixin method('post')
                     mixin csrf(token)
-                    input(name='quote[name]', placeholder='Name*', value= ('undefined' == values.name) ? '' : values.name)
-                    input(name='quote[company]', placeholder='Company', value= ('undefined' == values.company) ? '' : values.company) 
-                    input(name='quote[url]', placeholder='URL', value= ('undefined' == values.url) ? '' : values.url)
-                    input(name='quote[phone]', placeholder='Phone', value= ('undefined' == values.phone) ? '' : values.phone)
-                    input(name='quote[email]', placeholder='Email*', value= ('undefined' == values.email) ? '' : values.email)
-                    input(name='quote[deadline]', placeholder='Deadline', value= ('undefined' == values.deadline) ? '' : values.deadline)
-                    textarea(name='quote[comment]', placeholder='Short Description*', value= ('undefined' == values.comment) ? '' : values.comment)
-                    select(name='quote[budget]')
+                    input(name='quote[name]', class="name", placeholder='Name*', value= ('undefined' == values.name) ? '' : values.name)
+                    input(name='quote[company]', class="company", placeholder='Company', value= ('undefined' == values.company) ? '' : values.company) 
+                    input(name='quote[url]', class="url", placeholder='URL', value= ('undefined' == values.url) ? '' : values.url)
+                    input(name='quote[phone]', class="phone", placeholder='Phone*', value= ('undefined' == values.phone) ? '' : values.phone)
+                    input(name='quote[email]', class="email", placeholder='Email*', value= ('undefined' == values.email) ? '' : values.email)
+                    input(name='quote[deadline]', class="deadline", placeholder='Deadline', value= ('undefined' == values.deadline) ? '' : values.deadline)
+                    textarea(name='quote[comment]', class="comment", placeholder='Short Description*', value= ('undefined' == values.comment) ? '' : values.comment)
+                    select(name='quote[budget], class="budget",')
                       option(value='-none-') Budget
                       option(value='8k-10k') 8k-10k
                       option(value='10k-25k') 10k-25k
                       option(value='25k-50k') 25k-50k
                       option(value='50k-100k') 50k-100k
                       option(value='100k') 100k+
-                    input(type='submit', value='Send it!', class='send')
+                    input(type='button', value='Send it!', class='send')
+                .quoteerrors
+                  .e-name
+                  .e-company
+                  .e-url
+                  .e-phone
+                  .e-email
+                  .e-deadline
+                  .e-comment
+                  .e-budget
+                  .e-response
         .row
           .span12
             .goto-top

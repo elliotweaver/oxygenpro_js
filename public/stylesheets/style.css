@@ -799,6 +799,17 @@ h3 {
 .quotes .q-pager .dot.inactive {
     background: url("../images/dot_inactive.png") no-repeat scroll 0 0 transparent;
 }
+.quoteerrors div {
+	clear: both;
+	color: red;
+	font-style: italic;
+}
+.quoteerrors .e-response {
+  clear: both;
+  color: red;
+  font-weight: bold;
+  font-style: normal;
+}
 
 .quoteform {
     margin-top: 20px;

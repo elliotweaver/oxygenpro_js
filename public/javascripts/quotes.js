@@ -17,6 +17,58 @@ $(document).ready(function() {
 	  //$('.quote-'+current).animate({ opactiy : '0' }, dur);
 	  //$('.quote-'+next).animate({ opactiy : '0' }, dur);
 	});
+	
+	$(".quoteform .send").click(function() {
+	  
+	  var e = false;
+	  
+	  //name
+    if ($(".quoteform .name").val() == '') {
+      $(".e-name").html("Enter a name");
+      e = true;
+    }
+    else {
+      $(".e-name").html("");
+    }
+    
+    //email
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if (!re.test($(".quoteform .email").val())) {
+      $(".e-email").html("Enter a valid email address");
+    }
+    else {
+      $(".e-email").html("");
+    }
+    
+    //comment
+    if ($(".quoteform .comment").val() == '') {
+      $(".e-comment").html("Enter a project description");
+    }
+    else {
+      $(".e-comment").html("");
+    }
+    
+    //comment
+    if ($(".quoteform .phone").val() == '') {
+      $(".e-phone").html("Enter a phone number");
+    }
+    else {
+      $(".e-phone").html("");
+    }
+    
+    //no errors send form
+    if (!e) {
+      $.ajax({
+        url: "/quote?name="+$(".quoteform .name").val()+"&url="+$(".quoteform .url").val()+"&email="+$(".quoteform .email").val()+"&comment="+$(".quoteform .comment").val()+"&company="+$(".quoteform .company").val()+"&phone="+$(".quoteform .phone").val()+"&budget=25&deadline="+$(".quoteform .deadline").val(),
+        success: function(data) {
+          $(".e-response").html(data);
+        }
+      });
+    }
+    
+  });
+	
+	
 });
 
 var qPager = function() {

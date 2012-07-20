@@ -56,7 +56,7 @@ app.get('/work', common.flashInit, routes.work, common.flashFlush);
 app.get('/work/vmware', common.flashInit, routes.workvmware, common.flashFlush);
 app.get('/clients', common.flashInit, routes.clients, common.flashFlush);
 app.get('/about',common.flashInit,  routes.about, common.flashFlush);
-app.post('/quote', common.flashInit, routes.quote, common.flashFlush);
+app.get('/quote', common.flashInit, routes.quote, common.flashFlush);
 
 /* /blog */
 app.get('/blog',common.flashInit,  routes.blog.index, common.flashFlush);

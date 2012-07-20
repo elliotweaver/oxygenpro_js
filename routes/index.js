@@ -50,8 +50,11 @@ exports.about = function(req, res, next) {
 
 exports.quote = function(req, res, next) {
 
-  var values = req.body.quote;
+  var values = req.query;
   var pass = true;
+  
+  console.log(values);
+  console.log(req.query);
   
   try {
     values.name = sanitize(values.name).xss().trim();
@@ -129,8 +132,7 @@ exports.quote = function(req, res, next) {
       };
       transport.sendMail(message, function(error) {
         console.log(error);
-        req.session.flash.success.push( 'Thank you! We will get back to you shortly.' );
-        res.redirect('/');
+        res.send( 'Thank you! We will get back to you shortly.' );
       });
     });
   }

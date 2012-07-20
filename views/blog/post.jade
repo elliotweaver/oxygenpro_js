@@ -22,7 +22,7 @@ html
             .span12
               .inside
                 .title2
-                  h1
+                  .h1
                     | Blog
                   
     a(name='blog')
@@ -40,7 +40,7 @@ html
                       - else
                         - for post in posts
                           .post
-                            h2
+                            h1
                               a(href='/blog/#{post.slug}') !{post.title}
                             .meta
                               .date
@@ -68,3 +68,4 @@ html
     mixin footer()
        
     script(type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js')
+    script(type='text/javascript', src='/javascripts/scripts.js')

@@ -3,7 +3,9 @@ body {
   background-color: #181A1C;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
-
+.hidden {
+	display: none;
+}
 a {
   color: #ff0143;
 }
@@ -576,6 +578,35 @@ h3 {
     right: 160px;
     top: 1px;
 }
+.slide-disney .primary {
+    display: block;
+    margin: 0 auto;
+}
+.slide-disney .tile {
+    position: absolute;
+}
+.slide-disney .tile0 {
+    right: 29px;
+    top: 0;
+}
+.slide-disney .tile1 {
+    max-width: 1123px;
+    right: -160px;
+    top: 1px;
+}
+.slide-disney .tile2 {
+    max-width: 970px;
+    right: -22px;
+    top: 51px;
+}
+.slide-disney .tile3 {
+    max-width: 548px;
+    right: 0;
+    top: 74px;
+}
+.slide.inactive {
+	display: none;
+}
 .s-left {
 	  background: url("../images/div.jpg") no-repeat scroll right top transparent;
     padding-right: 20px;
@@ -670,6 +701,36 @@ h3 {
     padding: 20px;
 }
 
+.front-pager {
+    margin: 15px 0;
+    position: absolute;
+    top: 410px;
+}
+.front-pager .left {
+    float: left;
+    cursor: pointer;
+    margin-right: 5px;
+}
+.front-pager .dots {
+    float: left;
+}
+.front-pager .dots .front-dot {
+    float: left;
+    height: 9px;
+    margin: 5px 2px;
+    width: 9px;
+}
+.front-pager .dots .inactive {
+    background: url("../images/dot_inactive.png") no-repeat scroll 0 0 transparent;
+}
+.front-pager .dots .active {
+    background: url("../images/dot_active.png") no-repeat scroll 0 0 transparent;
+}
+.front-pager .front-dot {
+	  cursor: pointer;
+}
+
+
 .sep-large {
     /* margin-top: 30px; */
     overflow: hidden;
@@ -684,7 +745,7 @@ h3 {
     padding: 90px 20px;
 }
 .region {
-    background: url("../images/sep_large.png") no-repeat scroll 0 0 transparent;
+    background: url("../images/sep_large.png") no-repeat scroll center top transparent;
     padding: 90px 20px;
 }
 #projects .project {
@@ -693,22 +754,28 @@ h3 {
     margin-bottom: 10px;
     margin-right: 10px;
     cursor: pointer;
+    border: 1px solid #cccccc;
 }
-#projects .project .image {}
+#projects .project .link a {
+	  display: block;
+    height: 164px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 292px;
+    z-index: 2;
+}
 #projects .project .text {
-    background: url("../images/dark_left.jpg") repeat scroll 0 0 transparent;
+    background: url("../images/work.png") repeat scroll 0 0 transparent;
     height: 165px;
     color: #FFFFFF;
     position: absolute;
     top: 0;
-    left: 302px;
     display: none;
     width: 293px;
     z-index: 1;
-    opacity: 0;
 }
 #projects .project-3 .text {
-	  left: -302px;
 }
 #projects .project .text .qtitle {
     border-bottom: 1px solid;
@@ -724,7 +791,7 @@ h3 {
     display: block;
 }
 #projects .project-3 .text {
-    background: url("../images/dark_right.jpg") repeat scroll 0 0 transparent;
+    background: url("../images/work.png") repeat scroll 0 0 transparent;
 }
 #projects .project-3 {
     margin-right: 0;
@@ -1018,7 +1085,7 @@ clear: both;
     margin-bottom: 50px;
 }
 #blog .posts .post h2 {}
-#blog .posts .post h2 a {
+#blog .posts .post h1 a, #blog .posts .post h2 a {
     color: #3A4147;
     font-size: 35px;
 }
@@ -1131,17 +1198,19 @@ clear: both;
     background: url("../images/square_grey.jpg") repeat scroll 0 0 transparent;
 }
 #leadership .items .item .text {
-    background: url("../images/square_pink.gif") repeat scroll 0 0 transparent;
+    /* background: url("../images/square_pink.gif") repeat scroll 0 0 transparent; */
+    background: url("../images/leadership_left.gif") repeat scroll 0 0 transparent;
     height: 216px;
     left: 225px;
     position: absolute;
     top: 0;
     width: 215px;
     z-index: 1;
-    opacity: 0;
+    display: none;
 }
 #leadership .items .item-right .text {
-	  background: url("../images/square_pink_r.gif") repeat scroll 0 0 transparent;
+	  /* background: url("../images/square_pink_r.gif") repeat scroll 0 0 transparent; */
+	  background: url("../images/leadership_right.gif") repeat scroll 0 0 transparent;
 	  left: -225px;
 }
 #leadership .items .item .text .name {
@@ -1178,8 +1247,17 @@ clear: both;
     z-index: 2;
 }
 #subheader .title2 h1 {
-color: #B1B3B5;
+    color: #B1B3B5;
     font-size: 50px;
+    line-height: 53px;
+    position: relative;
+    text-transform: uppercase;
+    top: 10px;
+}
+#subheader .title2 .h1 {
+    color: #B1B3B5;
+    font-size: 50px;
+    font-weight: bold;
     line-height: 53px;
     position: relative;
     text-transform: uppercase;

@@ -4,21 +4,21 @@ $(document).ready(function() {
 	
 	$('#leadership .item-left').hover(
       function() {
-        $(this).children('.text').animate({ opacity: 0 }, 1);
-        $(this).children('.text').animate({ opacity: 1 }, dur);
+        $(this).children('.text').hide();
+        $(this).children('.text').show();
       },
       function() {
-    	  $(this).children('.text').animate({ opacity: 0 }, 1);
+    	  $(this).children('.text').hide();;
       }
 	);
 	
 	$('#leadership .item-right').hover(
     function() {
-      $(this).children('.text').animate({ opacity: 0 }, 1);
-      $(this).children('.text').animate({ opacity: 1 }, dur);
+      $(this).children('.text').hide();
+      $(this).children('.text').show();
 	  },
 	  function() {
-		  $(this).children('.text').animate({ opacity: 0 }, 1);
+		  $(this).children('.text').hide();
 	  }
 	);
 	

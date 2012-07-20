@@ -12,6 +12,7 @@ html
     script(type='text/javascript', src='/javascripts/jquery.colorbox-min.js')
     script(type='text/javascript', src='/javascripts/cs.js')
     script(type='text/javascript', src='/javascripts/proj.js')
+    script(type='text/javascript', src='/javascripts/scripts.js')
     
   body
   
@@ -34,7 +35,7 @@ html
                 ul
                   li
                     a(href='#case-studies')
-                      | Case Studies
+                      | Highlighted
                   li.last
                     a(href='#projects')
                       | Projects
@@ -48,7 +49,7 @@ html
             .inside
               .head-inline
                 h2.title-pink
-                  | Case Studies
+                  | Highlighted
                 .subtitle
                   | lorem ipsum
               .cases
@@ -99,15 +100,19 @@ html
                   - if (i == 3) { i = 1; } else { i += 1; }
                   div(class='project project-#{i}')
                     .image
+                      img(src='/images/#{project.image}', alt='#{project.title}', title='#{project.title}')
+                    .link
                       - var link = '';
                       - if (project.video !== '')
                         - link = project.video+'?autoplay=1';
                         a(href='#{link}', class='cb')
-                          img(src='/images/#{project.image}', alt='#{project.title}', title='#{project.title}')
                       - else
-                        - link = project.link;
-                        a(href='#{link}', target='_blank')
-                          img(src='/images/#{project.image}', alt='#{project.title}', title='#{project.title}')
+                        - if (project.link !== '')
+                          - link = project.link;
+                          a(href='#{link}', target='_blank')
+                        - if (project.photo !== '')
+                          - link = '/images/'+project.photo;
+                          a(href='#{link}', class='cb')
                     .text
                       .qtitle
                         !{project.title}

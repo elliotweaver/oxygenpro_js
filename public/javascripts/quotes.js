@@ -35,6 +35,7 @@ $(document).ready(function() {
     var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if (!re.test($(".quoteform .email").val())) {
       $(".e-email").html("Enter a valid email address");
+      e = true;
     }
     else {
       $(".e-email").html("");
@@ -43,6 +44,7 @@ $(document).ready(function() {
     //comment
     if ($(".quoteform .comment").val() == '') {
       $(".e-comment").html("Enter a project description");
+      e = true;
     }
     else {
       $(".e-comment").html("");
@@ -51,6 +53,7 @@ $(document).ready(function() {
     //comment
     if ($(".quoteform .phone").val() == '') {
       $(".e-phone").html("Enter a phone number");
+      e = true;
     }
     else {
       $(".e-phone").html("");

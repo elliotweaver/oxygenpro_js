@@ -1,6 +1,8 @@
 include forms
 
 mixin header(type)
+  #fb-root
+  
   #header.white-wash
     .container
       .row
@@ -15,6 +17,8 @@ mixin header(type)
               span.login
                 img(src='/images/lock.png')
                 a(href='/login', class='t-grey-light') Log in
+              span.fb
+                div(class="fb-like", data-href="https://www.facebook.com/pages/Oxygen-Productions-Inc/139085175440", data-send="false", data-layout="button_count", data-width="450", data-show-faces="false")
             .menu
               ul
                 - if (type == 'home')

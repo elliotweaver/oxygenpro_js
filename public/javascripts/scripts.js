@@ -1,5 +1,14 @@
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=156638724355054";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
 $(document).ready(function() {
 	  
+  
 	  
 	  var controller = $.scrollorama({ blocks: '.scrollblock' });
 	  $('.scrollblock').css('position', 'relative').css('top', '0');

@@ -428,6 +428,7 @@ h3 {
     font-size: 12px;
     margin: 10px 0;
 }
+
 #header .info .phone {
     border-right: 1px solid;
     margin-right: 10px;
@@ -437,6 +438,12 @@ h3 {
     margin-right: 5px;
     position: relative;
     top: -2px;
+}
+#header .info .fb {
+	display: block;
+    float: right;
+    margin-left: 20px;
+    width: 77px;
 }
 #header .menu {
     clear: right;
@@ -480,10 +487,8 @@ h3 {
     z-index: 2;
 }
 #about .s-right img {
-    background: url("../images/trans.png") repeat scroll 0 0 transparent;
     float: right;
     margin: 0 20px 20px;
-    padding: 7px;
 }
 
 /* Capabilities */

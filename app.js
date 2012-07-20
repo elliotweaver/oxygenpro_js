@@ -54,6 +54,7 @@ app.configure('development', function(){
 app.get('/', common.flashInit, routes.index, common.flashFlush);
 app.get('/work', common.flashInit, routes.work, common.flashFlush);
 app.get('/work/vmware', common.flashInit, routes.workvmware, common.flashFlush);
+app.get('/work/disney', common.flashInit, routes.workdisney, common.flashFlush);
 app.get('/clients', common.flashInit, routes.clients, common.flashFlush);
 app.get('/about',common.flashInit,  routes.about, common.flashFlush);
 app.get('/quote', common.flashInit, routes.quote, common.flashFlush);

@@ -1328,24 +1328,22 @@ background: none repeat scroll 0 0 transparent;
     text-shadow: 1px 0 1px #000000;
 }
 
-#work-vmware {}
-#work-vmware .inside {
+.work-cs .inside {
 	  background-attachment: scroll;
     background-clip: border-box;
     background-color: transparent;
-    background-image: url("../images/vmware_csh.jpg");
     background-origin: padding-box;
     background-repeat: no-repeat;
     min-height: 2131px;
     padding-top: 160px;
     width: 980px;
 }
-#work-vmware .inside h1 {
+.work-cs .inside h1 {
 	  color: #3C4248;
     font-family: arial;
     font-size: 28px;
 }
-#work-vmware .inside .text {
+.work-cs .inside .text {
 	  border-bottom: 1px solid #B9BDBE;
     border-top: 1px solid #B9BDBE;
     color: #7E848B;
@@ -1357,19 +1355,29 @@ background: none repeat scroll 0 0 transparent;
     padding-bottom: 20px;
     padding-top: 10px;
 }
-#work-vmware .inside h2 {
+.work-cs .inside h2 {
 	  color: #474B50;
     font-family: verdana;
     font-size: 13px;
 }
-#work-vmware .inside .checkout p {
+.work-cs .inside .checkout p {
 	  color: #279CD9;
     font-family: verdana;
     font-size: 16px;
     margin-top: 20px;
 }
 
-
+#work-vmware .inside {
+	background-image: url("../images/vmware_csh.jpg");
+}
+#work-disney .inside {
+	background-image: url("../images/disney_cs_p.jpg");
+	min-height: 1710px;
+  padding-top: 40px;
+}
+#work-disney .inside .checkout p {
+	color: #d20f00;
+}
 
 
 

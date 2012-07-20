@@ -1,0 +1,70 @@
+include mixins/blocks
+
+!!! html
+html
+  head
+    title= title
+    link(type="image/x-icon", href="/images/favicon.ico", rel="shortcut icon")
+    link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+    // link(rel='stylesheet', href='/stylesheets/bootstrap-responsive.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js')
+    script(type='text/javascript', src='/javascripts/jquery.colorbox-min.js')
+    script(type='text/javascript', src='/javascripts/cs.js')
+    script(type='text/javascript', src='/javascripts/proj.js')
+    
+  body
+  
+  a(name='top')
+    
+  mixin header('work')
+  mixin flash()
+    
+  
+  .white-wash
+    #subheader
+      .container
+        .row
+          .span12
+            .inside
+              .title2
+                .h1
+                  | Work
+              .submenu
+                ul
+                  li
+                    a(href='/work#case-studies')
+                      | Highlighted
+                  li.last
+                    a(href='/work#projects')
+                      | Projects
+
+  a(name='work-disney')
+  .white-wash
+    #work-disney.region-top.work-cs
+      .container
+        .row
+          .span12
+            .inside
+              h1
+                | Multi-Brand Flash Based Flipbook
+              .text
+                
+                p
+                  | Disney Junior offers familiar Disney characters and other cartoons to help children learn early math and language skills as well as healthy eating and lifestyles.
+
+                p
+                  | Disney Junior ask Oxygen to create a Flash based flipbook to show off some of the latest happenings with their many hit shows. Utilizing tons of Brand assets and video clips, we created a bright and colorful layout that is as visually interesting as it is informative. 
+                              
+              .checkout
+                p
+                  | Check out the layouts below! >
+               
+            .goto-top
+              a(href='#top')
+                | Top 
+                img(src='/images/arrow_up.png')
+    
+  mixin footer()
+  
+  

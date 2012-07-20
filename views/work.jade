@@ -62,7 +62,8 @@ html
                       - i++;
                       div(class='cs cs-#{i}')
                         .image
-                          img(src='/images/#{cs.image}')
+                          a(href="/work/"+cs.name)
+                            img(src='/images/#{cs.image}')
                         .info
                           .text
                             !{cs.quick}

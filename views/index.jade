@@ -34,24 +34,28 @@ html
           .row.hero-inside
             .span12
               .inside
-                .slide.slide-0.slide-vmware.active
-                  a(href="/work/vmware")
-                    img(src='/images/t-9.jpg', class='tile tile1')
-                    img(src='/images/t-4a.png', class='tile tile3')
-                    img(src='/images/t-2a.png', class='tile tile2')
-                .slide.slide-1.slide-disney.inactive
+                - if (randomnum == 0 || randomnum == 2) {
+                  .slide.slide-0.slide-vmware
+                    a(href="/work/vmware")
+                      img(src='/images/t-9.jpg', class='tile tile1')
+                      img(src='/images/t-4a.png', class='tile tile3')
+                      img(src='/images/t-21a.png', class='tile tile2')
+                - }
+                - if (randomnum == 1) {
+                .slide.slide-1.slide-disney
                   a(href="/work/disney")
                     img(src='/images/disn_2.png', class='tile tile1')
                     img(src='/images/disn_1.png', class='tile tile3')
                     img(src='/images/disn_0.png', class='tile tile2')
-                .front-pager
-                  .dots
-                    - var i = 0;
-                    - for(i = 0; i < 2; i++)
-                      - if (i == 0)
-                        div(class="active front-dot front-dot-#{i}")
-                      - else
-                        div(class="inactive front-dot front-dot-#{i}")
+                - }
+                //.front-pager
+                //  .dots
+                //    - var i = 0;
+                //    - for(i = 0; i < 2; i++)
+                //      - if (i == 0)
+                //        div(class="active front-dot front-dot-#{i}")
+                //      - else
+                //        div(class="inactive front-dot front-dot-#{i}")
                 
                 
     

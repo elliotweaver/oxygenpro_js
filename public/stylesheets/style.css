@@ -524,7 +524,7 @@ h3 {
     position: absolute;
     top: 229px;
     width: 245px;
-    font-size: 12px;
+    font-size: 11px;
 }
 
 /* Clients */
@@ -1379,6 +1379,9 @@ background: none repeat scroll 0 0 transparent;
 	color: #d20f00;
 }
 
+.copy a {
+	color: #5E6163;
+}
 
 
      

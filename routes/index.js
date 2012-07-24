@@ -20,7 +20,8 @@ exports.login = function(req, res, next) {
 };
 
 exports.index = function(req, res, next) {
-  res.render('index', { title: 'Oxygen Productions' });
+  var randomnum = Math.floor(Math.random()*2);
+  res.render('index', { title: 'Oxygen Productions', randomnum: randomnum });
   next();
 };
 

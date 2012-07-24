@@ -1,4 +1,6 @@
 $(document).ready(function() {
+  
+  /*
   var timer;
   clearTimeout(timer);
   timer = setInterval(eval("fPager"),"7000");
@@ -17,9 +19,11 @@ $(document).ready(function() {
     $(this).addClass('active');
     $('.slide-'+num).removeClass('inactive').addClass('active');
   });
+  */
   
 });
 
+/*
 var fPager = function() {
   var dur = 500;
   var current = getActiveFront();
@@ -45,3 +49,4 @@ var getActiveFront = function() {
   });
   return active;
 };
+*/

@@ -8,14 +8,12 @@
 
 $(document).ready(function() {
 	  
-  
-	  
 	  var controller = $.scrollorama({ blocks: '.scrollblock' });
 	  $('.scrollblock').css('position', 'relative').css('top', '0');
 	  
 	  /* Top VMware */
 	  controller.animate(
-	      '.tile3',
+	      '.slide-vmware .tile3',
 	      { 
 	        delay: 0, 
 	        duration: 800, 
@@ -25,7 +23,7 @@ $(document).ready(function() {
 	      }
 	    );
 	  controller.animate(
-	    '.tile1',
+	    '.slide-vmware .tile1',
 	    { 
 	      delay: 0, 
 	      duration: 800, 
@@ -34,6 +32,28 @@ $(document).ready(function() {
 	      end:310 
 	    }
 	  );
+	  
+	  /* Top Disney */
+    controller.animate(
+        '.slide-disney .tile3',
+        { 
+          delay: 0, 
+          duration: 800, 
+          property:'top', 
+          start:0, 
+          end:206
+        }
+      );
+    controller.animate(
+      '.slide-disney .tile1',
+      { 
+        delay: 0, 
+        duration: 800, 
+        property:'top', 
+        start:1, 
+        end:310 
+      }
+    );
 	  
 	  /*
 		controller.animate(

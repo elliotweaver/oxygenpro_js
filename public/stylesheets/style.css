@@ -601,8 +601,8 @@ h3 {
 }
 .slide-disney .tile3 {
     max-width: 548px;
-    right: 0;
-    top: 74px;
+    right: 50px;
+    top: 0px;
 }
 .slide.inactive {
 	display: none;
@@ -705,6 +705,7 @@ h3 {
     margin: 15px 0;
     position: absolute;
     top: 410px;
+    padding: 20px;
 }
 .front-pager .left {
     float: left;

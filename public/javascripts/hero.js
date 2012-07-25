@@ -4,6 +4,7 @@ $(document).ready(function() {
   var timer;
   clearTimeout(timer);
   timer = setInterval(eval("fPager"),"7000");
+  */
   $(".front-pager .front-dot").click(function() {
     var num;
     $($(this).attr('class').split(' ')).each(function(){
@@ -19,7 +20,6 @@ $(document).ready(function() {
     $(this).addClass('active');
     $('.slide-'+num).removeClass('inactive').addClass('active');
   });
-  */
   
 });
 

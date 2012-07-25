@@ -705,7 +705,7 @@ h3 {
     margin: 15px 0;
     position: absolute;
     top: 410px;
-    padding: 20px;
+    padding: 20px 20px 20px 0;
 }
 .front-pager .left {
     float: left;

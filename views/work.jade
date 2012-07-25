@@ -111,9 +111,10 @@ html
                         - if (project.link !== '')
                           - link = project.link;
                           a(href='#{link}', target='_blank')
-                        - if (project.photo !== '')
-                          - link = '/images/'+project.photo;
-                          a(href='#{link}', class='cb')
+                        - else
+                          -if (project.photo !== '')
+                            - link = '/images/'+project.photo;
+                            a(href='#{link}', class='cb')
                     .text
                       .qtitle
                         !{project.title}

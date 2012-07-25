@@ -13,12 +13,12 @@ $(document).ready(function() {
         num = arr[2];
       }
     });
-    //de-active all
     $('.front-pager .front-dot').removeClass('active').addClass('inactive');
-    $('.slide').removeClass('active').addClass('inactive');
-    //activate
     $(this).addClass('active');
-    $('.slide-'+num).removeClass('inactive').addClass('active');
+    $('.slide').removeClass('active').addClass('inactive').css('display', 'none');
+    $('.slide-'+num).fadeIn(function() {
+      $(this).removeClass('active').addClass('inactive');
+    });
   });
   
 });

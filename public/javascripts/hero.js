@@ -21,6 +21,20 @@ $(document).ready(function() {
     });
   });
   
+  $(".front-pager .dot-arrow").click(function() {
+    var num = getActiveFront();
+    var next = 0;
+    if (num != ($(".front-dot").length - 1)) {
+      next = num + 1;
+    }
+    $('.front-pager .front-dot').removeClass('active').addClass('inactive');
+    $('.front-pager .front-dot-'+next).addClass('active');
+    $('.slide').removeClass('active').addClass('inactive').css('display', 'none');
+    $('.slide-'+next).fadeIn(function() {
+      $(this).removeClass('active').addClass('inactive');
+    });
+  });
+  
 });
 
 /*
@@ -38,6 +52,7 @@ var fPager = function() {
   $('.front-pager .front-dot-'+next).removeClass('inactive').addClass('active');
   $('.slide-'+next).removeClass('inactive').addClass('active');
 };
+*/
 
 var getActiveFront = function() {
   var active = '1';
@@ -47,6 +62,5 @@ var getActiveFront = function() {
             active = arr[2];
         }
   });
-  return active;
+  return parseInt(active);
 };
-*/

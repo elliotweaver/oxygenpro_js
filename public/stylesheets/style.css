@@ -961,15 +961,28 @@ clear: both;
 #clients h3 {
     color: #FFFFFF;
     font-size: 14px;
-    font-style: italic;
+    font-style: normal;
     line-height: 17px;
     padding-right: 20px;
 }
 #clients p {
     color: #C7CACD;
-    font-style: italic;
+    font-style: normal;
     line-height: 15px;
     padding-right: 20px;
+}
+
+.dot-arrow {
+	  background: url("/images/homebtn.png") no-repeat scroll 0 0 transparent;
+	  cursor: pointer;
+    float: left;
+    height: 14px;
+    margin-left: 3px;
+    margin-top: 2px;
+    width: 15px;
+}
+.dot-arrow:hover {
+	background: url("/images/homebtn.png") no-repeat scroll 0 -14px transparent;
 }
 
 #capabilities {}

@@ -442,10 +442,12 @@ h3 {
     top: -2px;
 }
 #header .info .fb {
-	display: block;
+	   display: block;
     float: right;
     margin-left: 20px;
     width: 77px;
+    top: -3px;
+    position: relative;
 }
 #header .menu {
     clear: right;

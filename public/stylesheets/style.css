@@ -29,7 +29,13 @@ p.highlightlink {
     font-size: 16px;
     padding-top: 10px;
 }
-
+.padd {
+	padding-left: 20px;
+}
+.padd-in {
+  position: relative;
+  left: -20px;
+}
 .white-wash {
 	  background-color: #FFFFFF;
 }
@@ -435,7 +441,7 @@ p.highlightlink {
     padding: 20px;
 }
 #header .logo {
-    margin: 33px 10px 10px 0;
+    margin: 36px 10px 10px 0;
     float: left;
 }
 #header .info {
@@ -1040,10 +1046,10 @@ clear: both;
 }
 #capabilities .items .over ul li {
 	  color: #D4DAE1;
-    line-height: 15px;
+    font-size: 11px;
+    line-height: 13px;
     list-style-image: none;
     list-style-type: none;
-    font-size: 12px;
 }
 #capabilities .items .over ul.first {
 	  float: left;
@@ -1073,7 +1079,7 @@ clear: both;
 }
 #capabilities .items .item.hover .over {
     display: block;
-    padding: 41px 25px;
+    padding: 46px 25px;
 }
 #capabilities h3 {
     color: #1F2C35;
@@ -1301,6 +1307,15 @@ clear: both;
     float: left;
     position: relative;
     z-index: 2;
+}
+#subheader .title2-alt {
+	  color: #B1B3B5;
+    font-size: 50px;
+    line-height: 53px;
+    position: relative;
+    text-transform: uppercase;
+    top: 10px;
+    font-weight: bold;
 }
 #subheader .title2 h1 {
     color: #B1B3B5;

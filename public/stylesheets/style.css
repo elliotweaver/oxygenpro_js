@@ -653,7 +653,7 @@ p.highlightlink {
     text-align: right;
 }
 
-#case-studies {
+#case-studies .wrapper {
 
 }
 #case-studies .hider {
@@ -830,6 +830,7 @@ p.highlightlink {
     font-style: italic;
     left: 180px;
     position: relative;
+    width: 500px;
 }
 .quote-top .text2 {
     color: #181818;

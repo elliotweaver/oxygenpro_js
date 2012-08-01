@@ -182,7 +182,7 @@ h3 {
     font-size: 18px;
     font-weight: normal;
     line-height: 22px;
-    padding: 5px 12px;
+    padding: 5px 12px 4px 12px;
     text-transform: uppercase;
 }
 .title-pink {
@@ -193,7 +193,7 @@ h3 {
     font-size: 18px;
     font-weight: normal;
     line-height: 22px;
-    padding: 5px 12px;
+    padding: 5px 12px 4px 12px;
     text-transform: uppercase;
 }
 .arrow-bright a {
@@ -448,6 +448,7 @@ h3 {
     width: 77px;
     top: -3px;
     position: relative;
+    overflow: hidden;
 }
 #header .menu {
     clear: right;
@@ -993,32 +994,58 @@ clear: both;
     width: 570px;
 }
 #capabilities .items .item {
-    background: url("../images/bars.png") repeat scroll 0 -84px transparent;
-    height: 74px;
-    width: 267px;
+    cursor: pointer;
+    float: left;
+    height: 155px;
     margin-bottom: 10px;
     margin-right: 10px;
-    float: left;
-    cursor: pointer;
+    width: 540px;
+}
+#capabilities .items .item-0 {
+	  background: url("../images/cap_images.jpg") repeat scroll 0 0 transparent;
+}
+#capabilities .items .item-0.hover {
+    background: url("../images/cap_images.jpg") repeat scroll 0 -155px transparent;
+}
+#capabilities .items .item-1 {
+	  background: url("../images/cap_images.jpg") repeat scroll 0 -310px transparent;
+}
+#capabilities .items .item-1.hover {
+    background: url("../images/cap_images.jpg") repeat scroll 0 -465px transparent;
+}
+#capabilities .items .item-2 {
+	  background: url("../images/cap_images.jpg") repeat scroll 0 -620px transparent;
+}
+#capabilities .items .item-2.hover {
+    background: url("../images/cap_images.jpg") repeat scroll 0 -775px transparent;
 }
 .contact .a2 {
     color: #939393;font-size: 16px;font-style: italic;margin-left: 20px;margin-right: 10px;
   }
-  
+#capabilities .items .over ul {
+	  margin: 0;
+}
+#capabilities .items .over ul li {
+	  color: #D4DAE1;
+    line-height: 15px;
+    list-style-image: none;
+    list-style-type: none;
+    font-size: 12px;
+}
+#capabilities .items .over ul.first {
+	  float: left;
+    margin-right: 30px;
+    width: 230px;
+}
+#capabilities .items .over ul.last {}
   .contact .a3 {
     color: #1F2C35;font-size: 16px;font-style: italic;font-weight: bold;
   }
-#capabilities .items .item.hover {
-    background: url("../images/bars.png") repeat scroll 0 0 transparent;
-}
 #capabilities .items .item .text {
-    color: #373F47;
-    display: table-cell;
-    font-size: 18px;
+    color: #737B82;
+    font-size: 12px;
     height: 74px;
-    padding: 0 25px;
-    text-transform: uppercase;
-    vertical-align: middle;
+    padding: 45px 245px 40px 25px;
 }
 #capabilities .items .item.hover .text {
     display: none;
@@ -1029,11 +1056,11 @@ clear: both;
     font-size: 13px;
     height: 74px;
     padding: 0 25px;
-    text-transform: uppercase;
     vertical-align: middle;
 }
 #capabilities .items .item.hover .over {
-    display: table-cell;
+    display: block;
+    padding: 41px 25px;
 }
 #capabilities h3 {
     color: #1F2C35;

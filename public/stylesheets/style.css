@@ -38,9 +38,17 @@ p.highlightlink {
 }
 .white-wash {
 	  background-color: #FFFFFF;
+	  overflow: hidden;
 }
 .hero-wrapper {
 	overflow: hidden;
+}
+.container:before, .container:after {
+    content: "";
+    display: block;
+}
+#footer, #clients {
+    overflow: hidden;
 }
 
 

@@ -478,8 +478,9 @@ p.highlightlink {
     overflow: hidden;
 }
 #header .menu {
-    clear: right;
-    float: right;
+    position: absolute;
+    right: 0;
+    top: 40px;
 }
 #header .menu ul li {
     float: left;

@@ -108,13 +108,13 @@ exports.quote = function(req, res, next) {
         "<strong>Description:</strong> " + values.comment + "<br>" +
         "</p>";
     
-    //'janet@oxygenproductions.com, ron@oxygenproductions.com, elliot@oxygenproductions.com, patrick@oxygenproductions.com',
+    //'janet@oxygenproductions.com,ron@oxygenproductions.com,elliot@oxygenproductions.com,patrick@oxygenproductions.com',
     
     var transport = nodemailer.createTransport("Sendmail", "/usr/sbin/sendmail");
     var message = {
         generateTextFromHTML: true,
         from: 'admin@oxygenproductions.com',
-        to: 'janet@oxygenproductions.com, ron@oxygenproductions.com, elliot@oxygenproductions.com, patrick@oxygenproductions.com',
+        to: 'janet@oxygenproductions.com,ron@oxygenproductions.com,elliot@oxygenproductions.com,patrick@oxygenproductions.com',
         subject: subject, 
         html: html
     };
@@ -124,7 +124,7 @@ exports.quote = function(req, res, next) {
         res.redirect('/');
       }
       
-      message = {
+      var message2 = {
           generateTextFromHTML: true,
           from: 'admin@oxygenproductions.com',
           to: values.email,
@@ -132,7 +132,7 @@ exports.quote = function(req, res, next) {
           subject: 'Thank you from Oxygen Productions, Inc.', 
           html: "Thank you for you request. Someone will be in touch with you shortly."
       };
-      transport.sendMail(message, function(error) {
+      transport.sendMail(message2, function(error2) {
         res.send( 'Thank you! We will get back to you shortly.' );
       });
     });

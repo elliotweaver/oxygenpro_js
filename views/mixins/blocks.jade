@@ -9,7 +9,7 @@ mixin header(type)
         .span12
           .inside
             .logo
-              a(href='/')
+              a(href='/', title="Oxygen Productions", alt="Oxygen Productions")
                 img(src='/images/logo5.png')
             .info.t-grey-light
               span.phone
@@ -23,30 +23,30 @@ mixin header(type)
               ul
                 - if (type == 'home')
                   li.first
-                    a(href='/', class='active') Home
+                    a(href='/', class='active', title="Home") Home
                 - else
                   li.first
-                    a(href='/') Home
+                    a(href='/', title="Home") Home
                 - if (type == 'work')
                   li
-                    a(href='/work', class='active') Work
+                    a(href='/work', class='active', title="Work") Work
                 - else
                   li
-                    a(href='/work') Work
+                    a(href='/work', title="Work") Work
                 - if (type == 'about')
                   li
-                    a(href='/about', class='active') About
+                    a(href='/about', class='active', title="About") About
                 - else
                   li
-                    a(href='/about') About
+                    a(href='/about', title="About") About
                 - if (type == 'blog')
                   li
-                    a(href='/blog', class='active') Blog
+                    a(href='/blog', class='active', title="Blog") Blog
                 - else
                   li
-                    a(href='/blog') Blog
+                    a(href='/blog', title="Blog") Blog
                 li.last
-                  a(href='/#quote') Free Quote
+                  a(href='/#quote', title="Free Quote") Free Quote
 mixin flash()
   #flash.white-wash
     .container

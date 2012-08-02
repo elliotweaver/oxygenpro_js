@@ -59,9 +59,6 @@ exports.quote = function(req, res, next) {
   var values = req.query;
   var pass = true;
   
-  console.log(values);
-  console.log(req.query);
-  
   try {
     values.name = sanitize(values.name).xss().trim();
     check(values.name).notNull();
@@ -117,8 +114,7 @@ exports.quote = function(req, res, next) {
     var message = {
         generateTextFromHTML: true,
         from: 'admin@oxygenproductions.com',
-        to: 'quotes@oxygenproductions.com',
-        cc: 'elliot@oxygenproductions.com',
+        to: 'janet@oxygenproductions.com, ron@oxygenproductions.com, elliot@oxygenproductions.com, patrick@oxygenproductions.com',
         subject: subject, 
         html: html
     };

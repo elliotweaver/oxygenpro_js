@@ -38,12 +38,12 @@ html
                 - if (randomnum == 0 || randomnum == 2) { var slide0 = 'active'; } else { var slide0 = 'inactive'; }
                 - if (randomnum == 1) { var slide1 = 'active'; } else { var slide1 = 'inactive'; }
                 div(class="slide slide-0 slide-vmware "+slide0)
-                  a(href="/work/vmware")
+                  a(href="/work/vmware", title="VMware Highlights")
                     img(src='/images/t-9.jpg', class='tile tile1')
                     img(src='/images/t-4a.png', class='tile tile3')
                     img(src='/images/t-21a.png', class='tile tile2')
                 div(class="slide slide-1 slide-disney "+slide1)
-                  a(href="/work/disney")
+                  a(href="/work/disney", title="Disney Highlights")
                     img(src='/images/disn_2.png', class='tile tile1')
                     img(src='/images/t-5c.png', class='tile tile3')
                     img(src='/images/disn_0.png', class='tile tile2')
@@ -73,7 +73,7 @@ html
                     | We provide creative, strategic and technical development of digital products and services.  We’ve been building successful online experiences for our clients since 2000.
                   p.light
                     | Wanna chat about your upcoming project? 
-                    a(href="#quote") Contact us...
+                    a(href="#quote", title="Free Quote") Contact us...
                   
             .span7
               .inside.s-right
@@ -81,14 +81,14 @@ html
                   h2.title.bg-grey.t-white
                     | Blog
                   .item
-                    a(href="/blog")
+                    a(href="/blog/moxie-conference-room-fx", title="Moxie Conference Room FX")
                       img(src='/images/blog-moxie-s.png')
                     h3.small
                       | Moxie Conference Room FX
                     p.light
                       | While shooting an interview with Richard Donner, he used a phrase I've never forgotten, “Kill your babies”. "Babies" being anything we feel a strong attachment to...
                     p.t-pink
-                      a(href="/blog/moxie-conference-room-fx") Read more...
+                      a(href="/blog/moxie-conference-room-fx", title="Moxie Conference Room FX") Read more...
     
     
     #capabilities.bg-gradient-white.white-wash
@@ -107,8 +107,8 @@ html
             .inside
               .block.ability.ability-design
                 h3.throw
-                  | Design
-                img(src='/images/cap_strategy_0.jpg')
+                  | Strategy
+                img(src='/images/cap_strategy_0.jpg', title="Strategy", alt="Strategy")
                 p
                   | With research and experience we guide our clients through the planning process with a collaborative and insightful approach. 
                   
@@ -116,16 +116,16 @@ html
             .inside
               .block.ability.ability-motion
                 h3.throw
-                  | Motion
-                img(src='/images/cap_creative_0.jpg')
+                  | Creative
+                img(src='/images/cap_creative_0.jpg', title="Creative", alt="Creative")
                 p
                   | Whether your project is for the web, mobile, tradeshow screen or all three, we’ve got the solution for you. 
           .span4
             .inside
               .block.ability.ability-ad
                 h3.throw
-                  | Advertising
-                img(src='/images/cap_dev_0.jpg')
+                  | Development
+                img(src='/images/cap_dev_0.jpg', title="Development")
                 p
                   | We will work with you to determine the best technology for your project. We are always pushing ourselves to learn newer and cutting edge practices.
         .row.bottom
@@ -133,7 +133,7 @@ html
             .inside
               .block
                 span.arrow-bright
-                  a(href='/about#capabilities', class='t-grey-dark') See all capabilities
+                  a(href='/about#capabilities', class='t-grey-dark', title="See all capabilities") See all capabilities
   
     #clients.bg-gradient-grey
       .container

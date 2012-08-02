@@ -35,10 +35,10 @@ html
               .submenu
                 ul
                   li
-                    a(href='#case-studies')
+                    a(href='#case-studies', title="Highlighted")
                       | Highlighted
                   li.last
-                    a(href='#projects')
+                    a(href='#projects', title="Projects")
                       | Projects
 
   a(name='case-studies')
@@ -63,8 +63,8 @@ html
                       - i++;
                       div(class='cs cs-#{i}')
                         .image
-                          a(href="/work/"+cs.name)
-                            img(src='/images/#{cs.image}')
+                          a(href="/work/"+cs.name, title=""+cs.title)
+                            img(src='/images/#{cs.image}', title=""+cs.title, alt=""+cs.title)
                         .info
                           .text
                             !{cs.quick}

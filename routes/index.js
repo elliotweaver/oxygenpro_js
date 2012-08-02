@@ -133,7 +133,6 @@ exports.quote = function(req, res, next) {
           html: "Thank you for you request. Someone will be in touch with you shortly."
       };
       transport.sendMail(message, function(error) {
-        console.log(error);
         res.send( 'Thank you! We will get back to you shortly.' );
       });
     });

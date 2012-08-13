@@ -51,6 +51,18 @@ app.configure('development', function(){
   app.use(express.errorHandler());
 });
 
+app.get('/projects', function(req, res) {
+  res.redirect('work');
+});
+
+app.get('/project', function(req, res) {
+  res.redirect('work');
+});
+
+app.get('/project/:id', function(req, res) {
+  res.redirect('work');
+});
+
 app.get('/', common.flashInit, routes.index, common.flashFlush);
 app.get('/work', common.flashInit, routes.work, common.flashFlush);
 app.get('/work/vmware', common.flashInit, routes.workvmware, common.flashFlush);

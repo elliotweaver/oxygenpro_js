@@ -52,15 +52,15 @@ app.configure('development', function(){
 });
 
 app.get('/projects', function(req, res) {
-  res.redirect('work');
+  res.redirect(301, 'work');
 });
 
 app.get('/project', function(req, res) {
-  res.redirect('work');
+  res.redirect(301, 'work');
 });
 
 app.get('/project/:id', function(req, res) {
-  res.redirect('work');
+  res.redirect(301, 'work');
 });
 
 app.get('/', common.flashInit, routes.index, common.flashFlush);
